@@ -50,7 +50,7 @@ export default async function HomePage() {
           ))}
         </div>
         <div className='mt-8 lg:mt-16 text-right'>
-          <Link className={buttonVariants({ variant: "outline" })} href='/connect'>More Articles <ArrowRight /></Link>
+          <Link className={buttonVariants({ variant: "outline" })} href='/posts'>More Articles <ArrowRight /></Link>
         </div>
       </section>
     </div>
