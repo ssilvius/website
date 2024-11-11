@@ -1,5 +1,7 @@
 import { getContentTree, getFeaturedPosts } from '@/lib/content';
+import { buttonVariants } from "@/components/ui/button"
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: 'sean.silvius.me',
@@ -46,6 +48,9 @@ export default async function HomePage() {
               </p>
             </article>
           ))}
+        </div>
+        <div className='mt-8 lg:mt-16 text-right'>
+          <Link className={buttonVariants({ variant: "outline" })} href='/connect'>More Articles <ArrowRight /></Link>
         </div>
       </section>
     </div>
