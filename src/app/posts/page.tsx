@@ -27,7 +27,7 @@ export default async function Pages() {
 
   return (
     <div>
-      <div className="px-6 lg:px-8">
+      <div className="pt-32 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <h2 className="mb-4 text-3xl font-thin tracking-tight text-primary md:text-5xl">
             index

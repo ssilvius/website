@@ -39,7 +39,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
   return (
     <Suspense fallback={<Skeleton />}>
       <SchemaJsonLd schema={schema} />
-      <article className="container mx-auto px-4 py-8">
+      <article className="container pt-32 mx-auto px-4 py-8">
       <section className="mb-8">
         <div className="flex items-center justify-between">
           <div className="text-xs font-medium mb-2 flex-grow">{schema.headline}</div>
@@ -53,7 +53,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
         </div>
       </section>
 
-        <h1 className="mb-8 text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 className="mb-4 text-3xl font-thin tracking-tight text-primary md:text-5xl">
           {schema.description}
         </h1>
         <div className="mb-8 relative aspect-video">
