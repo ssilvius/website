@@ -5,7 +5,7 @@ import readingTime from 'reading-time';
 import { ContentFile, ContentTree, ContentPostingSchema } from '@/types/content';
 import { SiteConfig } from '@/types/site';
 
-const contentDirectory = path.join(process.cwd(), 'content');
+const contentDirectory = process.env.CONTENT_DIRECTORY || path.join(process.cwd(), 'content');
 
 const siteConfig: Readonly<SiteConfig> = {
   name: 'Sean Silvius',
@@ -62,7 +62,8 @@ const parseMarkdownToSchema = (
     keywords: (frontmatter.tags || []).join(','),
     articleBody: content,
     articleSection: frontmatter.section || 'Blog',
-    wordcount: wordCount
+    wordcount: wordCount,
+    featured: frontmatter.featured || false
   };
 };
 
@@ -126,6 +127,7 @@ export const getAllPosts = (tree: ContentTree): ContentFile[] => {
 export const getFeaturedPosts = (tree: ContentTree): ContentFile[] => {
   const posts = getAllPosts(tree);
   return posts
+    .filter(post => post.schema.featured)
     .sort((a, b) => Date.parse(b.schema.datePublished) - Date.parse(a.schema.datePublished))
     .slice(0, siteConfig.featuredCount);
 }

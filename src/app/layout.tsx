@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import clsx from "clsx";
 import TopBar from "@/components/ui/topbar";
+import Footer from "@/components/ui/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,9 +30,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={ clsx(geistSans.variable, geistMono.variable, 'text-lg h-full bg-no-repeat bg-gradient-to-br from-indigo-100 via-white to-cyan-100' ) }>
         <TopBar />
-        <main className="mx-auto max-w-7xl py-32">
+        <div className="page mx-auto max-w-7xl py-32">
           {children}
-        </main>
+        </div>
+        <Footer />
       </body>
     </html>
   );
