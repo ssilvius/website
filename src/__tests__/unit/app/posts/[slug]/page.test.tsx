@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import PostPage from '@/app/posts/[slug]/page';
+import PostPage from '@/app/(content)/posts/[slug]/page';
 import { getContentTree, findPostBySlug } from '@/lib/content';
 import { notFound } from 'next/navigation';
 import { contentTreeFactory, contentFileFactory } from '@/__factories__';

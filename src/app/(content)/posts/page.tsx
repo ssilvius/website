@@ -5,7 +5,7 @@ import { ContentFile } from '@/types/content';
 import { Badge } from "@/components/ui/badge";
 
 export const metadata = {
-  title: 'Content Index',
+  title: 'The Index | sean.silvius.me',
   description: 'Collection of things I\'ve written down for some reason or another — mostly because I can\'t believe I had to say it in the first place.',
 };
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Pages from '@/app/posts/page'
+import Pages from '@/app/(content)/posts/page'
 import { getContentTree, getAllPosts } from '@/lib/content'
 import { contentTreeFactory, contentFileFactory } from '@/__factories__';
 import { notFound } from "next/navigation";
