@@ -51,3 +51,18 @@ export interface ContentFile {
   readingTime: string;
   rawContent: string;
 }
+
+export type Frontmatter = { 
+  id: string; 
+  featured: boolean; 
+  title: string; 
+  date: string; 
+  excerpt: string; 
+  tags: string[]; 
+  author: Author;
+}
+
+export type Author = {
+  name: string;
+  picture: string;
+}

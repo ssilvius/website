@@ -1,43 +1,40 @@
 'use client';
 
-import { useEditor } from '@/contexts/editor';
-import { useEffect } from 'react';
-import { getFileContent } from '@/actions/editor/content';
+import { useEffect, useState } from 'react';
+import { useEditorStore, useInitEditor, setupAutoSave } from '@/stores/editor';
 import { EditorContent } from '@tiptap/react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import EditorToolbar from './toolbar';
 
 export default function Editor() {
   const { 
-    selectedPath, 
-    editor, 
-    setContent, 
-    isDirty 
-  } = useEditor();
+    activePath,
+    setEditor,
+    draft,
+    saveDraft,
+    clearDraft,
+  } = useEditorStore();
+  
+  const editor = useInitEditor();
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    async function loadContent() {
-      if (!selectedPath) return;
+    setIsMounted(true);
+  }, []);
 
-      try {
-        const fileContent = await getFileContent(selectedPath);
-        if (fileContent) {
-          setContent(fileContent.content);
-          editor?.commands.setContent(fileContent.content);
-        }
-      } catch (error) {
-        console.error('Error loading file:', error);
-      }
-    }
+  useEffect(() => {
+    setEditor(editor);
+    return () => setEditor(null);
+  }, [editor, setEditor]);
 
-    loadContent();
-  }, [selectedPath, editor, setContent]);
+  useEffect(() => {
+    const cleanup = setupAutoSave();
+    return () => cleanup();
+  }, []);
 
-  if (!selectedPath) {
-    return (
-      <div className="h-full flex items-center justify-center">
-        <p className="text-muted-foreground">Select a file to edit</p>
-      </div>
-    );
+  if (!isMounted) {
+    return null;
   }
 
   return (
@@ -45,18 +42,41 @@ export default function Editor() {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <span className="font-mono text-sm text-muted-foreground">
-            {selectedPath}
+            {activePath || 'New File'}
           </span>
-          {isDirty && (
+          {draft?.isDirty && (
             <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded">
               Unsaved changes
             </span>
           )}
         </div>
+        <div className="flex gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              if (draft) {
+                saveDraft(
+                  draft.content,
+                  'Manual save',
+                  draft.lastAuthor
+                );
+              }
+            }}
+            disabled={!draft?.isDirty}
+          >
+            Save Draft
+          </Button>
+        </div>
       </div>
+
       <Card className="flex-grow overflow-auto">
         <CardContent className="p-4">
-          <EditorContent editor={editor} className="min-h-[500px]" />
+          <EditorToolbar />
+          <EditorContent 
+            editor={editor} 
+            className="prose prose-sm max-w-none min-h-[500px]" 
+          />
         </CardContent>
       </Card>
     </div>

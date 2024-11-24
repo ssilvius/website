@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../globals.css";
 import { cn } from "@/lib/utils";
-import ClientProvider from '@/components/editor/client-provider';
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -29,11 +28,9 @@ export default function ManageLayout({
   return (
     <html lang="en" className='h-full'>
       <body className={cn(geistSans.variable, geistMono.variable, 'h-full')}>
-        <ClientProvider>
-          <AdminLayout>
-            {children}
-          </AdminLayout>
-        </ClientProvider>
+        <AdminLayout>
+          {children}
+        </AdminLayout>
       </body>
     </html>
   );

@@ -1,26 +1,23 @@
 'use server'
 
-import { Octokit } from '@octokit/rest';
+import { promises as fs } from 'fs';
+import path from 'path';
 import { NavItem, NavData } from '@/types/editor/nav';
 
-const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
-});
+const CONTENT_ROOT = process.cwd();
 
-const owner = process.env.GITHUB_OWNER || '';
-const repo = process.env.GITHUB_REPO || '';
-
-async function getDirectoryContent(path: string) {
+async function getDirectoryContent(dirPath: string) {
   try {
-    const response = await octokit.repos.getContent({
-      owner,
-      repo,
-      path,
-    });
-
-    return Array.isArray(response.data) ? response.data : [];
+    const fullPath = path.join(CONTENT_ROOT, dirPath);
+    const entries = await fs.readdir(fullPath, { withFileTypes: true });
+    
+    return entries.map(entry => ({
+      name: entry.name,
+      path: path.join(dirPath, entry.name),
+      type: entry.isDirectory() ? 'dir' : 'file'
+    }));
   } catch (error) {
-    console.error(`Error fetching ${path}:`, error);
+    console.error(`Error reading directory ${dirPath}:`, error);
     return [];
   }
 }
@@ -33,13 +30,34 @@ function formatTitle(filename: string): string {
     .join(' ');
 }
 
-async function processDirectory(path: string): Promise<NavItem[]> {
-  const contents = await getDirectoryContent(path);
+async function isEmptyDirectory(dirPath: string): Promise<boolean> {
+  try {
+    const fullPath = path.join(CONTENT_ROOT, dirPath);
+    const entries = await fs.readdir(fullPath);
+
+    for (const entry of entries) {
+      const entryPath = path.join(fullPath, entry);
+      const stat = await fs.stat(entryPath);
+      
+      if (stat.isDirectory()) return false;
+      if (stat.isFile() && /\.(mdx?|tsx?)$/.test(entry)) return false;
+    }
+    
+    return true;
+  } catch (error) {
+    console.error(`Error checking directory ${dirPath}:`, error);
+    return true;
+  }
+}
+
+async function processDirectory(dirPath: string): Promise<NavItem[]> {
+  const contents = await getDirectoryContent(dirPath);
   const items: NavItem[] = [];
-  
-  // First pass: collect directories
   const directories = contents.filter(item => item.type === 'dir');
+  
   for (const dir of directories) {
+    if (await isEmptyDirectory(dir.path)) continue;
+    
     const subItems = await processDirectory(dir.path);
     if (subItems.length > 0) {
       items.push({
@@ -50,7 +68,6 @@ async function processDirectory(path: string): Promise<NavItem[]> {
     }
   }
 
-  // Second pass: collect files
   const files = contents.filter(item => 
     item.type === 'file' && /\.(mdx?|tsx?)$/.test(item.name)
   );
@@ -61,38 +78,62 @@ async function processDirectory(path: string): Promise<NavItem[]> {
     });
   }
 
-  return items;
+  return items.sort((a, b) => a.title.localeCompare(b.title));
 }
 
 export async function getNavigation(): Promise<NavData> {
-  // Get versions from the root directory
-  const rootContents = await getDirectoryContent('');
-  const versions = rootContents
-    .filter(item => item.type === 'dir' && /^\d+\.\d+/.test(item.name))
-    .map(item => item.name);
+  try {
+    const [contentNav, draftsNav] = await Promise.all([
+      processDirectory('content'),
+      processDirectory('drafts')
+    ]);
 
-  // Process content and drafts directories
-  const [contentNav, draftsNav] = await Promise.all([
-    processDirectory('content'),
-    processDirectory('drafts')
-  ]);
+    const navData: NavData = {
+      navMain: [
+        {
+          title: 'Content',
+          url: '#content',
+          items: contentNav
+        },
+        {
+          title: 'Drafts',
+          url: '#drafts',
+          items: draftsNav
+        }
+      ]
+    };
 
-  // Combine into final navigation structure
-  const navData: NavData = {
-    versions,
-    navMain: [
-      {
-        title: 'Content',
-        url: '#content',
-        items: contentNav
-      },
-      {
-        title: 'Drafts',
-        url: '#drafts',
-        items: draftsNav
-      }
-    ]
-  };
+    return navData;
+  } catch (error) {
+    console.error('Error generating navigation:', error);
+    return {
+      navMain: [
+        { title: 'Content', url: '#content', items: [] },
+        { title: 'Drafts', url: '#drafts', items: [] }
+      ]
+    };
+  }
+}
 
-  return navData;
+export async function pathExists(checkPath: string): Promise<boolean> {
+  try {
+    await fs.access(path.join(CONTENT_ROOT, checkPath));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export async function ensureDirectories() {
+  const requiredDirs = ['content', 'drafts'];
+  
+  for (const dir of requiredDirs) {
+    const dirPath = path.join(CONTENT_ROOT, dir);
+    try {
+      await fs.access(dirPath);
+    } catch {
+      await fs.mkdir(dirPath, { recursive: true });
+      console.log(`Created directory: ${dir}`);
+    }
+  }
 }

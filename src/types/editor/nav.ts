@@ -6,6 +6,5 @@ export interface NavItem {
 }
 
 export interface NavData {
-  versions: string[];
   navMain: NavItem[];
 }

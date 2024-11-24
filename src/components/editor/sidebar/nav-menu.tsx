@@ -1,12 +1,14 @@
 'use client'
 
+import React from 'react';
 import { NavItem } from '@/types/editor/nav';
 import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
-import { useEditor } from '@/contexts/editor';
+import { useEditorStore } from '@/stores/editor';
+import { ChevronRight, ChevronDown, File, Folder } from 'lucide-react';
 
 interface NavMenuProps {
   items: NavItem[];
@@ -14,40 +16,86 @@ interface NavMenuProps {
 }
 
 export function NavMenu({ items, level = 0 }: NavMenuProps) {
-  const { setSelectedPath, selectedPath } = useEditor();
+  const { activePath, setActivePath } = useEditorStore();
+  const [expandedItems, setExpandedItems] = React.useState<Set<string>>(new Set());
 
   if (!items?.length) return null;
 
   const handleFileSelect = (path: string) => {
-    console.log('File selected:', path);
-    
-    // Only skip if it's JUST a hash (directory)
-    if (path === '#') {
-      console.log('Skipping empty directory');
-      return;
+    if (path !== '#') {
+      const filePath = path.replace(/^#/, '');
+      setActivePath(filePath);
     }
-    
-    // Remove the leading hash and set the path
-    const filePath = path.replace(/^#/, '');
-    console.log('Setting selected path to:', filePath);
-    setSelectedPath(filePath);
   };
+
+  const toggleExpanded = (itemTitle: string) => {
+    setExpandedItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(itemTitle)) {
+        newSet.delete(itemTitle);
+      } else {
+        newSet.add(itemTitle);
+      }
+      return newSet;
+    });
+  };
+
+  const isDirectory = (item: NavItem) => Boolean(item.items?.length);
+  const isExpanded = (itemTitle: string) => expandedItems.has(itemTitle);
 
   return (
     <SidebarMenu>
-      {items.map((item) => (
-        <SidebarMenuItem key={item.title}>
-          <SidebarMenuButton 
-            asChild 
-            isActive={item.url.replace(/^#/, '') === selectedPath}
-            className={level > 0 ? 'pl-4' : ''}
-            onClick={() => handleFileSelect(item.url)}
-          >
-            <button type="button">{item.title}</button>
-          </SidebarMenuButton>
-          {item.items && <NavMenu items={item.items} level={level + 1} />}
-        </SidebarMenuItem>
-      ))}
+      {items.map((item) => {
+        const isDir = isDirectory(item);
+        const expanded = isExpanded(item.title);
+        const isActive = item.url.replace(/^#/, '') === activePath;
+        const indentationClass = level > 0 ? `pl-${level * 4}` : '';
+
+        return (
+          <SidebarMenuItem key={item.title}>
+            <SidebarMenuButton 
+              asChild 
+              isActive={isActive}
+              className={`
+                ${indentationClass}
+                flex items-center gap-2 w-full
+                hover:bg-accent/50 transition-colors
+                ${isActive ? 'text-primary font-medium' : 'text-muted-foreground'}
+              `}
+              onClick={() => {
+                if (isDir) {
+                  toggleExpanded(item.title);
+                } else {
+                  handleFileSelect(item.url);
+                }
+              }}
+            >
+              <button type="button" className="flex items-center gap-2 w-full py-1">
+                <span className="flex items-center gap-2 min-w-[20px]">
+                  {isDir ? (
+                    <>
+                      {expanded ? (
+                        <ChevronDown className="h-4 w-4" />
+                      ) : (
+                        <ChevronRight className="h-4 w-4" />
+                      )}
+                      <Folder className="h-4 w-4" />
+                    </>
+                  ) : (
+                    <File className="h-4 w-4" />
+                  )}
+                </span>
+                <span className="truncate">{item.title}</span>
+              </button>
+            </SidebarMenuButton>
+            {isDir && expanded && (
+              <div className="ml-2">
+                <NavMenu items={item.items!} level={level + 1} />
+              </div>
+            )}
+          </SidebarMenuItem>
+        );
+      })}
     </SidebarMenu>
   );
 }
