@@ -4,6 +4,7 @@ This is my personal site's code. It is based on nextjs 14 app router. The drafts
 
 ## The flow for the editor is 
 
+```mermaid
 sequenceDiagram
     participant LF as Local File
     participant GH as GitHub
@@ -32,3 +33,4 @@ sequenceDiagram
     UI->>GH: Publish (saveFile)
     GH-->>DS: Success
     DS->>DS: Clear draft
+```
