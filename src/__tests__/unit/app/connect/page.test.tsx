@@ -6,7 +6,7 @@ import ConnectPage from '@/app/connect/page';
 // Mock the Cal component
 jest.mock('@calcom/embed-react', () => ({
   __esModule: true,
-  default: ({ calLink, style, config }: any) => (
+  default: ({ calLink }: { calLink: string }) => (
     <div data-testid="cal-embed" data-callink={calLink}>
       Cal.com Embed Component (Mocked)
     </div>
