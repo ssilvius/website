@@ -21,8 +21,14 @@ const parseMarkdownToSchema = (
   source: string, 
   filePath: string, 
   slug: string
-): ContentPostingSchema => {
+): ContentPostingSchema | null => {
   const { data: frontmatter, content } = matter(source);
+
+  if(process.env.VERCEL_ENV === 'production' && frontmatter.draft) {
+    console.log(`Skipping draft content in production environment: ${filePath}`);
+    return null;
+  }
+
   const wordCount = content.split(/\s+/).length;
 
   if (!frontmatter.title || !frontmatter.excerpt || !frontmatter.date) {
@@ -78,6 +84,15 @@ export const getContentTree = (dir: string = contentDirectory): ContentTree => {
       const slug = relativePath.replace(/\.(mdx?|markdown|md)$/, '');
       const source = fs.readFileSync(dir, 'utf8');
       const schema = parseMarkdownToSchema(source, relativePath, slug);
+      
+      // Skip draft content in production environment
+      if (schema === null) {
+        return {
+          path: relativePath,
+          type: 'file',
+          name
+        };
+      }
       
       return {
         path: relativePath,

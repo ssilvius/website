@@ -1,10 +1,10 @@
 ---
 id: keoRz1
 featured: true
-draft: true
-title: "Dragon Age: Veilguard – Welcome back to Thedas"
+draft: false
+title: "Dragon Age: Veilguard – A Beautiful But Hollow Return to Thedas"
 date: 2024-10-31T17:00:00.000Z
-excerpt: Almost 10 years to the day, the Dragon Age story continues. There has been several false starts, there was talk of a live service game, this is definately not that. This is definiately Thedas. FYI, It means THe Dragon Age Setting.
+excerpt: After nearly a decade of waiting and multiple development pivots, Dragon Age returns with Veilguard. While visually stunning and mechanically competent, does it recapture the depth and narrative impact that made the series legendary? Nah.
 tags:
   - gaming
   - dragon age
@@ -14,50 +14,56 @@ author:
   picture: /images/profile.jpg
 ---
 
-There are so many design choices that feel like a live service game, like Destiny. Bioware tried this before with Anthem and they built a looter shooter without loot. 
+When Dragon Age: Veilguard was first announced, I was beyond excited. After nearly 10 years since Inquisition (and its excellent Trespasser DLC), the promise of returning to Thedas to continue the story was thrilling. Behind Veilguard's gorgeous visuals and modernized combat lies a game that never fully escaped its troubled development history as a planned live-service title.
 
-  1. Three classes, that are all equal in use but play fairly different
-  1. no healer.
-  1. Each distinct area has it's own hub and quest givers, the first time I walked into one, I felt like I was meeting Davrim for the first time. 
-  1. Loot feels just like destiny, you get the same things over and over and upgrade them from whites to golds. There is a selection of unique, legendary items of course.
-  1. Verric is Zavala.
-  1. Races and factions feel like Destiny of old.
+The ghosts of that abandoned direction haunt every aspect of the game:
 
-But enough of that. Progression feels like Assassin's Creed, combat feels like God of War. The real point here is, BioWare has played a lot of good games over the last decade. They took what they learned in them and made it their own. In a pretty good feeling way. 
+1. The streamlined class system with just three options feels designed for future expansions rather than depth
+2. The removal of healing abilities and tactical party control simplifies combat to the point of repetitiveness
+3. Each area functions as a self-contained hub reminiscent of multiplayer-friendly zones
+4. The loot system feels ripped from Destiny—repetitive items with color-coded rarities and minimal variety
+5. Characters like Varric have been repurposed into quest-givers rather than true companions
+6. The faction reputation systems feel like the skeleton of planned live-service progression
 
-Following the cliffhanger ending of Dragon Age: Inquisition Tresspasser and the looming threat of the Fade spilling into the world of Thedas, Veilguard promises to be the next major step in the saga. But does it live up to the legacy of its predecessors? The answer is, yes.
+While BioWare has implemented many lessons from other successful games (God of War's combat fluidity, Assassin's Creed's progression systems), what's missing is what made Dragon Age special in the first place: genuine consequence, tactical depth, and characters whose relationships evolve organically rather than through reputation meters.
 
-## Story & Worldbuilding: Expanding the Fade and Beyond 
-Set years after the events of Inquisition, Veilguard introduces players to a new protagonist—an elite member of the Veilguard, a faction tasked with defending against supernatural threats linked to the Fade. The game opens with a world teetering on the brink, as the rifts between the physical world and the Fade grow wider, unleashing chaos across Thedas.
+Following the cliffhanger ending of Dragon Age: Inquisition Trespasser and the looming threat of the Fade spilling into the world of Thedas, Veilguard promises to be the next major step in the saga. But does it live up to the legacy of its predecessors? I must reluctantly say no.
 
-The story centers around the player's mission to uncover the source of these disturbances, with a strong emphasis on the growing tension between mages, templars, and various factions. In typical Dragon Age fashion, political intrigue, personal vendettas, and moral quandaries abound, making for a narrative that is equal parts engaging and heartbreaking. While the plot itself feels like a natural evolution of the series’ themes, the story sometimes struggles with pacing. The slow build-up early in the game gives way to frenetic, action-heavy sequences that can leave you wishing for a bit more character-driven depth.
+## Story & Worldbuilding: Disconnected from Legacy
+Set years after the events of Inquisition, Veilguard introduces players to a new protagonist—an elite member of the Veilguard, a faction tasked with defending against supernatural threats linked to the Solas. Despite the cliffhanger ending of Trespasser and the looming threat of Solas, the narrative feels strangely disconnected from previous games, with major world-changing decisions from past titles reduced to mere footnotes or brief mentions. But, wait, Varric is not in Kirkwall doing Varric things but the head of some group of people hunting Solas, new people that don't know Solas? I get Dorian and Bull are busy. You've got a new Divine that has other important people busy but a completely new crew of people that don't have any experience with Solas? Really good strategy to deal with a god there. Really.
 
-The worldbuilding is a highlight, with Veilguard expanding on lore established in Dragon Age: Inquisition, including deeper exploration of the Fade, the spirits, and the old gods. Fans of Dragon Age II will appreciate the return of certain factions and the way Veilguard expands on those storylines. The cities, villages, and wilds of Thedas are once again beautifully realized, with incredible attention to detail.
+The worldbuilding—once a cornerstone of the series—feels fragmented into self-contained zones that never coalesce into a living, breathing Thedas. Many locations serve as beautiful backdrops rather than societies with internal logic and politics. Fan-favorite regions like Antiva and Tevinter are disappointingly small and linear compared to the sprawling areas of previous games. Most egregiously, choices from previous games—imported through the Keep system—have minimal impact beyond occasional dialogue references, making the much-touted continuity feel superficial at best. Amazing characters players fell in love with are back! However they have a couple of lines and soundbites after. No story. No depth. 
 
-## Gameplay: A Solid Foundation with a Few Growing Pains
-Gameplay in Veilguard builds on the established mechanics of its predecessors. The tactical combat system returns, with a mix of real-time action and pause-to-command elements that gives players flexibility in how they approach encounters. New abilities, such as the ability to harness the power of the Fade itself, add a refreshing layer to combat.
+## Gameplay: Action Over Tactics
+Gone is the tactical depth that defined the series, replaced by a flashy but shallow action combat system that prioritizes spectacle over strategy. The removal of the tactical camera and party control options—staples since Origins—transforms Dragon Age from a thinking person's RPG into yet another dodge-roll action game. Combat quickly devolves into a repetitive cycle of spamming the same abilities, with little reason to experiment or adapt to different encounter types.
 
-However, combat at times feels uneven. While battles are intense and strategic, there are moments where the AI companions seem a bit too reactive, failing to execute complex strategies when needed. The new class systems are intriguing, allowing for a wide range of playstyles, but some balancing issues make certain abilities feel overpowered, while others are underwhelming.
+The three streamlined classes (Warrior, Rogue, Mage) offer far fewer build options than previous games, with skill trees that feel designed for future monetization rather than player expression. The specializations, once defining features that dramatically altered gameplay, now provide only modest statistical buffs and minimal mechanical changes. Even on the highest difficulties, the lack of resource management (no healing potions, no stamina/mana limitations) removes any need for thoughtful preparation or tactical planning.
 
-The world itself is large, and the exploration remains as rewarding as ever. Whether it’s uncovering hidden sidequests or discovering long-lost relics, there’s plenty to do outside of the main storyline. That said, some of the environments feel a bit familiar, especially for those who’ve played through Inquisition and its DLCs. The new regions, while expansive, don’t always manage to feel as unique or immersive as past zones like the Hinterlands or the Frostback Mountains.
+I mean. There is a melee mage. Not like the previous games where the melee was once in a deep rotation, but they are a rogue with spells.
 
-## Characters & Companion Dynamics: Familiar Faces, New Alliances
-One of the standout features of Dragon Age has always been its deep, well-written characters, and Veilguard is no exception. The companions are as diverse and complex as ever, with each one offering a personal narrative arc that ties into the broader story. You’ll find yourself torn between keeping old allies close or forging new bonds with members of the Veilguard faction, all of whom come with their own secrets, motivations, and quirks.
+The world exploration, while visually impressive, has been reduced to collecting map markers in disconnected zones. Side quests rarely offer meaningful narrative or rewards, feeling like checklist items rather than organic opportunities to engage with the world. The crafting and loot systems exemplify modern gaming's worst trends—an endless stream of color-coded items with incrementally better stats but no unique properties or lore significance. The result is a gameplay loop that feels designed for retention metrics rather than player satisfaction.
 
-The romance options are varied, with an interesting mix of familiar faces from past games and brand new characters to pursue. These relationships are as emotionally charged as ever, giving players the opportunity to explore the highs and lows of companionship in a time of looming catastrophe. While some romances feel more fleshed out than others, most players will find at least one compelling character arc to engage with.
+## Characters & Companions: Missing Depth
+While Dragon Age was once renowned for its complex, evolving companions, Veilguard's cast suffers from inconsistent writing and truncated character arcs. Companions no longer meaningfully grow or change based on your decisions—instead, relationships are reduced to reputation meters filled by selecting the "right" dialogue options or completing loyalty missions. The result feels transactional rather than organic, with romances that progress along predictable paths regardless of your character's personality or choices.
 
-That said, while the companion interactions remain a highlight, there are moments when the dialogue system feels a bit rigid. Unlike the earlier games in the series, Veilguard sometimes feels a bit more on-rails in terms of player agency, and some important choices can feel less impactful compared to what we’ve seen in Dragon Age: Origins or Inquisition.
+Returning characters like Varric and Harding are disappointingly underutilized, with the former relegated to a quest-giver role rather than a true companion. New characters show occasional promise but rarely receive enough screen time or narrative development to reach their potential. Dialogue options have been drastically simplified, with the nuanced personality system of previous games replaced by binary "nice/mean" choices that rarely affect how others perceive you.
 
-## Graphics & Audio: Stunning, but With a Few Stumbles
-Visually, Veilguard is a masterpiece. The environments are lush, the character models are detailed, and the world feels alive with activity. The reworked character animations and facial expressions are a major step forward, making the emotional weight of key scenes hit that much harder. I never thought I'd talk about hair in a game review but we need to stop and, enjoy some hair. The hair subsystem in Veilguard is something to behold. 
+Most disappointingly, companion approval no longer meaningfully impacts the story. Gone are the days when companions might leave your party or betray you based on your decisions. Instead, companions stick with you regardless of how their values clash with yours, undermining any sense of authentic relationship building. Even romance options feel artificially constrained, with far fewer options for same-sex relationships than previous entries, a puzzling step backward for a studio once celebrated for its inclusivity.
 
-The soundtrack, composed by the talented Hans Zimmer and Lorne Balfe, delivers sweeping orchestral pieces that match the scale and grandeur of the world. The voice acting is excellent across the board, with standout performances from both returning characters and newcomers. Personally I have 
+Thedas has had its own morality and customs when it comes to sexuality since the first game in 2009. It was an example of how games not set on earth in our history are allowed to have a different outlook on things like this. Its precedent gave almost 20 years of games to not be shackled by Judeo-Christian values. To force today's politics and vernacular on the citizens of Thedas at this point is disrespectful of everything that came before. It's a shame today's players have to deal with such a narrow heavy-handed approach to something that was already handled perfectly. 
 
-Unfortunately, there are still some technical hiccups. Frame rate issues pop up occasionally, especially during large-scale battles or in more densely populated areas. While these moments are brief, they do pull you out of the experience and serve as a reminder that Veilguard is a game that still needs a few patches to reach its full potential.
+## Graphics & Audio: Technical Excellence, Creative Shortcomings
+Visually, Veilguard is undeniably impressive. The environments are lush and detailed, character models show remarkable fidelity, and the lighting system creates genuinely breathtaking vistas. The facial animation technology is a genuine leap forward, allowing for subtle emotional performances previously impossible in the series. The hair rendering system deserves special praise, creating realistic and diverse hairstyles that move naturally during gameplay.
 
-## Final Verdict: A Promising, Yet Flawed, New Adventure
-Dragon Age: Veilguard is a game that offers fans of the series a lot to love. The story is rich and engaging, the characters are as memorable as ever, and the world of Thedas continues to be a fascinating place to explore. Combat and gameplay offer enough innovation to keep things fresh, though some balancing issues and technical bugs detract from the overall experience.
+The soundtrack, composed by the talented Hans Zimmer and Lorne Balfe, delivers sweeping orchestral pieces that match the scale and grandeur of the world. The voice acting is excellent across the board, with standout performances from both returning characters and newcomers. Personally, I have to commend the audio team for creating such immersive soundscapes that effectively distinguish each region of Thedas.
 
-Ultimately, Veilguard feels like a solid foundation for future Dragon Age games. While it doesn’t quite hit the same highs as Origins or Inquisition, it sets the stage for a thrilling new era in the franchise. Whether you’re a long-time fan or a newcomer, there’s plenty here to sink your teeth into—though some may prefer to wait for a few updates before diving in fully.
+However, technical excellence doesn't always translate to artistic cohesion. The art direction is not Dragon Age, it's cartoon-y, not what made previous Dragon Age titles so memorable. Character designs, while technically proficient, lack the uniqueness and cultural specificity of earlier games. Performance issues remain a significant problem, with frame rate drops in complex scenes and occasional texture pop-in that breaks immersion during crucial story moments.
 
-### Rating: 8/10
+## Final Verdict: A Beautiful but Hollow Return
+Dragon Age: Veilguard represents a technically accomplished but spiritually hollow return to Thedas. While it delivers spectacular visuals and modernized combat, it sacrifices the narrative depth, meaningful choices, and tactical gameplay that defined the series. What remains is a beautiful but shallow experience that follows modern gaming trends at the expense of the franchise's identity.
+
+For newcomers unfamiliar with what made Dragon Age special, Veilguard might seem like an acceptable open-world action RPG. For longtime fans, however, it's a disappointing reminder of how BioWare's distinctive voice has been gradually eroded by development troubles and shifting industry trends. The ghosts of its abandoned live-service direction haunt every aspect of the game, from its compartmentalized world design to its repetitive quest structure.
+
+At its core, Veilguard feels like a game made by people who understood what Dragon Age looked like, but not what made it meaningful. The result is a gorgeous but ultimately forgettable experience that fails to recapture the magic that made this franchise legendary.
+
+### Rating: 6/10
