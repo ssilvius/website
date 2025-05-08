@@ -1,3 +1,3 @@
 # sean.silvius.me 
-## A nextjs website, mdx blogging. Drizzle/postgres storing messages.
-This is my personal site's code. It is based on nextjs 14 app router. The drafts folder is not hooked up yet.
+## A Next.js static content website with MDX blogging
+This is my personal site's code. It is based on Next.js 14 app router with static generation of content from markdown files. The drafts folder contains work-in-progress content.

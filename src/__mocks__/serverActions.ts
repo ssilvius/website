@@ -1,1 +1,0 @@
-export const createMessage = jest.fn()
