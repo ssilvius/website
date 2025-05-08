@@ -63,7 +63,8 @@ const parseMarkdownToSchema = (
     articleBody: content,
     articleSection: frontmatter.section || 'Blog',
     wordcount: wordCount,
-    featured: frontmatter.featured || false
+    featured: frontmatter.featured || false,
+    draft: frontmatter.draft !== undefined ? frontmatter.draft : false
   };
 };
 

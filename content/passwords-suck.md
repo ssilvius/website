@@ -3,7 +3,10 @@ id: 5tycyX
 featured: true
 title: Passwords Suck - Why do we still use them?
 date: 2024-06-24T13:00:00.000Z
-excerpt: The idea of a secret combination of alpha-numeric characters to act as a lock is much older than the digital world. The first examples date back to Mesopotamia
+excerpt: >-
+  The idea of a secret combination of alpha-numeric characters to act as a lock
+  is much older than the digital world. The first examples date back to
+  Mesopotamia
 tags:
   - Authentication
   - security
@@ -12,6 +15,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 Much like the first Roman challenge/response passwords which were still used as late as World War II (Thunder!/Flash! was used during the Allied landing on Normandy) and beyond, our digital counterpart has the same flaw. Complexity. The evolution of the password over the last couple of decades was led by engineers' limits placed on the database field that stored the password data. You have no idea how many times I've had to update a field in databases first created in the 90s that had limits like 16 characters that were forced to downcase in clear text (not encrypted). 

@@ -4,13 +4,17 @@ featured: false
 slug: devops-best-practices
 title: DevOps Best Practices for Scaling Startups
 date: 2023-09-24T17:00:00.000Z
-excerpt: As startups successfully navigate the early stages of growth and begin scaling their operations, their DevOps practices must evolve to accommodate increasing complexity and demand.
+excerpt: >-
+  As startups successfully navigate the early stages of growth and begin scaling
+  their operations, their DevOps practices must evolve to accommodate increasing
+  complexity and demand.
 tags:
   - startups
   - DevOps
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 Implementing best practices in DevOps can help startups maintain agility, ensure reliable software delivery, and foster a culture of continuous improvement.

@@ -1,11 +1,10 @@
 ---
-
 id: 4gkLbV
-title: "Build Your Community, Not a Network."
+title: 'Build Your Community, Not a Network.'
 slug: build-community-not-network
 featured: false
 date: 2024-04-30T23:48:30.251Z
-coverImage: 'creative-community'
+coverImage: creative-community
 tags:
   - design thinking
   - engineering leadership
@@ -13,8 +12,10 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
-excerpt: "Communities offer depth and innovation over blind networking. Find or make one for yourself, today."
-
+excerpt: >-
+  Communities offer depth and innovation over blind networking. Find or make one
+  for yourself, today.
+draft: false
 ---
 
 In a world where professional success is often equated with the size of one's network, it's easy to fall into the trap of 'blind networking'—the relentless pursuit of contacts without a clear purpose or genuine connection. However, there's a growing recognition of the value of creative communities that offer more than just a collection of business cards. Nurturing a creative community can be far more beneficial than blind networking.

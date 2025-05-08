@@ -4,13 +4,19 @@ featured: false
 slug: lean-ux
 title: The Lean Startup Approach to UX Design
 date: 2024-01-26T18:00:00.000Z
-excerpt: The lean startup methodology, popularized by Eric Ries, has revolutionized the way startups approach product development and user experience (UX) design. At its core, the lean startup approach emphasizes iterative development, continuous learning, and a focus on validating assumptions through customer feedback.
+excerpt: >-
+  The lean startup methodology, popularized by Eric Ries, has revolutionized the
+  way startups approach product development and user experience (UX) design. At
+  its core, the lean startup approach emphasizes iterative development,
+  continuous learning, and a focus on validating assumptions through customer
+  feedback.
 tags:
   - startups
   - UX
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 For startups embracing the lean startup methodology, UX design plays a crucial role in ensuring that products and services are tailored to meet the needs and desires of their target users. Here's how the lean startup approach can be applied to UX design:

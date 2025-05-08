@@ -4,13 +4,16 @@ slug: ab-testing-strategies
 featured: false
 title: A/B Testing Strategies for Startups
 date: 2023-11-30T11:00:00.000Z
-excerpt: A/B testing is a powerful tool that can help startups make data-driven decisions and optimize their user experiences...
+excerpt: >-
+  A/B testing is a powerful tool that can help startups make data-driven
+  decisions and optimize their user experiences...
 tags:
   - startups
   - a/b testing
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 Implementing effective A/B testing strategies requires careful planning and execution. Here are some key strategies that startups can adopt to maximize the impact of their A/B testing efforts:
 

@@ -4,8 +4,9 @@ slug: continuous-learning-growth
 featured: true
 title: Creating a Culture of Continuous Learning and Growth
 date: 2023-02-22T12:00:00.000Z
-excerpt: As a servant leader, one of your most important responsibilities is to
-  nurture and develop the next generation of leaders within your organization.
+excerpt: >-
+  As a servant leader, one of your most important responsibilities is to nurture
+  and develop the next generation of leaders within your organization.
 tags:
   - leadership
   - servant leadership
@@ -14,7 +15,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
-
+draft: false
 ---
 
 In today's rapidly evolving business landscape, continuous learning and growth are essential for organizations to remain competitive and successful. As a servant leader, fostering a culture that embraces and encourages ongoing learning and development is crucial for empowering your team and driving long-term success.

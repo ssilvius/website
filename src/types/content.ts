@@ -34,6 +34,7 @@ export interface ContentPostingSchema extends SchemaOrg {
   articleSection: string;
   wordcount: number;
   featured: boolean;
+  draft?: boolean;
 }
 
 export interface ContentTree {

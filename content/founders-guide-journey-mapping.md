@@ -1,16 +1,17 @@
 ---
 id: khsMoA
-slug: founders-guide-journey-mapping 
+slug: founders-guide-journey-mapping
 featured: false
-title: "Founders Guide: Journey Mapping"
+title: 'Founders Guide: Journey Mapping'
 date: 2023-06-02T18:00:00.000Z
-excerpt: "Journey Mapping in Service Design: A Startup Founder's Guide"
+excerpt: 'Journey Mapping in Service Design: A Startup Founder''s Guide'
 tags:
   - Founders Guide
   - Service Design
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 As a startup founder, understanding your customers' experiences is crucial for building products and services that truly resonate. One powerful tool in your arsenal is journey mapping — a cornerstone of service design that can revolutionize how you approach user experience.
 

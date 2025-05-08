@@ -2,15 +2,20 @@
 id: Lqj8a0
 slug: postgres-uuidv7-performs
 featured: true
-title: "Primary Key UUIDs Finally Make Sense with v7"
+title: Primary Key UUIDs Finally Make Sense with v7
 date: 2024-08-22T18:00:00.000Z
-excerpt: "Relational databases have been using sequences as primary keys since dBASE and FoxPro. As our databases have become exceedingly large, and stored in multiple locations across many parts of clusters the sequential keys have become problematic."
+excerpt: >-
+  Relational databases have been using sequences as primary keys since dBASE and
+  FoxPro. As our databases have become exceedingly large, and stored in multiple
+  locations across many parts of clusters the sequential keys have become
+  problematic.
 tags:
   - PostgreSQL
   - architecture
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 **UPDATE: 27 Sept 2024** *Postgres 17 was released a couple days ago and UUIDv7 is still in review [UUID v7](https://commitfest.postgresql.org/47/4388/) status. I suggest staying with these solitions for the foreseeable future. I've added how to use UUIDv7 with NextJS and Drizzle. You can modify it for everything else type/javascript.*

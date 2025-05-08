@@ -2,15 +2,18 @@
 id: FSXxRy
 featured: false
 slug: idea-validation
-title: "Idea Validation: Testing Your Assumptions"
+title: 'Idea Validation: Testing Your Assumptions'
 date: 2022-12-12T17:00:00.000Z
-excerpt: The lean startup methodology, popularized by Eric Ries, has revolutionized the way startups approach product development and user experience (UX) design.
+excerpt: >-
+  The lean startup methodology, popularized by Eric Ries, has revolutionized the
+  way startups approach product development and user experience (UX) design.
 tags:
   - startups
   - MVP
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 Having a great idea is just the first step in the startup journey. Before investing significant time, effort, and resources into building a product or service, it's crucial to validate your idea by testing the underlying assumptions. Idea validation helps startups minimize risks, avoid costly mistakes, and increase their chances of achieving product-market fit.

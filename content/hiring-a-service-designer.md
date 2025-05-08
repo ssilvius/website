@@ -2,15 +2,16 @@
 id: 83xNUb
 slug: hiring-a-service-designer
 featured: false
-title: "Founders Guide: Hiring a Service Designer"
+title: 'Founders Guide: Hiring a Service Designer'
 date: 2023-02-19T18:00:00.000Z
-excerpt: "The Strategic Impact of Hiring a Service Designer for Your Startup"
+excerpt: The Strategic Impact of Hiring a Service Designer for Your Startup
 tags:
   - Founders Guide
   - Service Design
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 As a founder, you're constantly seeking ways to improve your product and user experience. Hiring a service designer can be a game-changing move for your startup, especially when done early in your journey. But what exactly can you expect, and why is it crucial to integrate service design from the start? Let's dive in.
 

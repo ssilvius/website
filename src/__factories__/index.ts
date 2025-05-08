@@ -33,6 +33,7 @@ export const contentPostingSchemaFactory = Factory.define<ContentPostingSchema>(
   articleSection: 'Blog',
   wordcount: faker.number.int({ min: 100, max: 2000 }),
   featured: faker.datatype.boolean(),
+  draft: faker.datatype.boolean(),
 }));
 
 export const contentFileFactory = Factory.define<ContentFile>(() => ({
@@ -44,6 +45,7 @@ export const contentFileFactory = Factory.define<ContentFile>(() => ({
 id: ${faker.string.alphanumeric(6)}
 slug: ${faker.lorem.slug()}
 featured: ${faker.datatype.boolean()}
+draft: ${faker.datatype.boolean()}
 title: "${faker.lorem.sentence()}"
 date: "${faker.date.past().toISOString()}"
 excerpt: "${faker.lorem.paragraph()}"

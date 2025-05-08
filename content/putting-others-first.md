@@ -1,13 +1,14 @@
 ---
 id: 8h3dKB
 slug: putting-others-first
-title: "The Servant Leader's Mindset: Putting Others First"
+title: 'The Servant Leader''s Mindset: Putting Others First'
 featured: true
 date: 2022-12-18T15:00:00.000Z
-excerpt: True leadership is not about power or authority, but about service and
-  putting the needs of others first. This is the core philosophy of servant
-  leadership, a leadership approach that prioritizes the growth and well-being
-  of team members over the self-interest of the leader.
+excerpt: >-
+  True leadership is not about power or authority, but about service and putting
+  the needs of others first. This is the core philosophy of servant leadership,
+  a leadership approach that prioritizes the growth and well-being of team
+  members over the self-interest of the leader.
 tags:
   - leadership
   - servant leadership
@@ -16,6 +17,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 As a servant leader, your primary focus is on empowering and enabling your team to achieve their full potential. You take a hands-on approach, working alongside your team members, providing support, and guidance, and removing obstacles that may hinder their progress.

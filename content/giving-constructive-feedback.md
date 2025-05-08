@@ -4,7 +4,9 @@ featured: false
 slug: giving-constructive-feedback
 title: The Art of Giving Constructive Feedback
 date: 2024-01-19T11:00:00.000Z
-excerpt: Feedback is a critical component of personal and professional growth, yet delivering feedback effectively can be a challenging task for many leaders.
+excerpt: >-
+  Feedback is a critical component of personal and professional growth, yet
+  delivering feedback effectively can be a challenging task for many leaders.
 tags:
   - leadership
   - servant leadership
@@ -13,6 +15,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 As a servant leader, mastering the art of giving constructive feedback is essential for nurturing the development of your team members and fostering a culture of continuous improvement.

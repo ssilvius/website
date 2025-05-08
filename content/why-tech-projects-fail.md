@@ -4,13 +4,18 @@ featured: false
 slug: why-tech-projects-fail
 title: Why Tech Projects Fail and How to Avoid It
 date: 2022-07-22T11:00:00.000Z
-excerpt: "Even the biggest tech giants like Google, Apple, and Amazon have had their share of failed projects that wasted millions. While failure is an inevitable part of innovation, some common pitfalls increase the risk of your tech project going off the rails."
+excerpt: >-
+  Even the biggest tech giants like Google, Apple, and Amazon have had their
+  share of failed projects that wasted millions. While failure is an inevitable
+  part of innovation, some common pitfalls increase the risk of your tech
+  project going off the rails.
 tags:
   - startups
   - leadership
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 One of the primary reasons tech projects derail is due to a lack of clear vision and requirements from the outset. If the key stakeholders and development team don't have a unified understanding of what the end product should look like and what it needs to accomplish, you're setting yourself up for costly rework and potential failure.

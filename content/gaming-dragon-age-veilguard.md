@@ -1,7 +1,8 @@
 ---
 id: keoRz1
 featured: true
-title: "Dragon Age: Veilguard – Welcome back to Thedas | sean.silvius.me"
+draft: true
+title: "Dragon Age: Veilguard – Welcome back to Thedas"
 date: 2024-10-31T17:00:00.000Z
 excerpt: Almost 10 years to the day, the Dragon Age story continues. There has been several false starts, there was talk of a live service game, this is definately not that. This is definiately Thedas. FYI, It means THe Dragon Age Setting.
 tags:

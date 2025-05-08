@@ -2,15 +2,16 @@
 id: uq8bnz
 slug: founders-guide-service-blueprints
 featured: false
-title: "Founders Guide: Service Blueprints"
+title: 'Founders Guide: Service Blueprints'
 date: 2024-09-17T18:00:00.000Z
-excerpt: "Service Blueprints in Service Design: A Startup Founder's Guide"
+excerpt: 'Service Blueprints in Service Design: A Startup Founder''s Guide'
 tags:
   - Founders Guide
   - Service Design
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 As a startup founder, you might often find yourself grappling with the challenge of not just creating a great product but also delivering a stellar service experience. This is where a Service Blueprint comes into play, a crucial tool in service design that maps out the entire service delivery process, ensuring that every interaction is seamless, efficient, and delightful.

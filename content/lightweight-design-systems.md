@@ -4,7 +4,10 @@ slug: lightweight-design-systems
 featured: true
 title: Startups Build or Use — Design Systems
 date: 2024-05-27T17:00:00.000Z
-excerpt: When choosing a toolkit for a tech startup efficient use of resources is paramount, being flexible is not a choice. A design system allows designers and engineers speak the same language.  
+excerpt: >-
+  When choosing a toolkit for a tech startup efficient use of resources is
+  paramount, being flexible is not a choice. A design system allows designers
+  and engineers speak the same language.
 tags:
   - startups
   - UX
@@ -12,6 +15,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 Hard-coding the bridge between code and design is simply stupid in 2024. Building from an existing design system has become standard. The choice of the design system can significantly impact the success of a product. Building a design system from scratch or using an overly complex, feature-rich system that lacks flexibility can hamper a startup's growth and innovation. Instead, embracing a lightweight existing design system offers numerous benefits that align with the unique challenges and demands faced by startups.

@@ -1,10 +1,12 @@
 ---
 id: kHv3JW
 featured: false
-slug: scaling-with-ruby-on-rails 
-title: "Scaling with Ruby on Rails: An Introduction"
+slug: scaling-with-ruby-on-rails
+title: 'Scaling with Ruby on Rails: An Introduction'
 date: 2024-03-19T17:00:00.000Z
-excerpt: Ruby on Rails is a popular web application framework known for its productivity and developer-friendly features.
+excerpt: >-
+  Ruby on Rails is a popular web application framework known for its
+  productivity and developer-friendly features.
 tags:
   - startups
   - Scaling
@@ -13,6 +15,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 Since the release of Ruby on Rails 7.0 (RoR) the framework has had a large resurgence in popularity. A few months ago with the release of Turbo 8, it is full steam ahead again. The founder of RoR and CTO at 37 Signals has written a few articles about how 37 Signals has taken their apps out of the cloud and is seeing massive successes as well as much lower costs. With future versions of Rails, we expect full support for simple PWA installable websites drastically simplifying deploying to mobile. With all of this, Rails is again the framework to go from idea to unicorn, swiftly.

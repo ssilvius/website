@@ -4,8 +4,9 @@ featured: false
 slug: mentoring-next-leaders
 title: Mentoring the Next Generation of Leaders
 date: 2021-11-14T11:00:00.000Z
-excerpt: As a servant leader, one of your most important responsibilities is to
-  nurture and develop the next generation of leaders within your organization.
+excerpt: >-
+  As a servant leader, one of your most important responsibilities is to nurture
+  and develop the next generation of leaders within your organization.
 tags:
   - leadership
   - servant leadership
@@ -14,6 +15,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 Mentoring is critical in enabling you to share your knowledge, experience, and wisdom with those who will carry the torch of leadership into the future.

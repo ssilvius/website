@@ -2,15 +2,18 @@
 id: r9adJP
 slug: ab-testing-better-user-experiences
 featured: false
-title: "A/B Testing for Better User Experiences"
+title: A/B Testing for Better User Experiences
 date: 2023-11-17T11:00:00.000Z
-excerpt: In the pursuit of delivering exceptional user experiences, A/B testing has emerged as a powerful tool for startups and businesses alike...
+excerpt: >-
+  In the pursuit of delivering exceptional user experiences, A/B testing has
+  emerged as a powerful tool for startups and businesses alike...
 tags:
   - startups
   - a/b testing
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 A/B testing, also known as split testing, involves comparing two or more variations of a user interface, design element, or feature to determine which one performs better based on predefined metrics.
 

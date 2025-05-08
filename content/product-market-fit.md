@@ -4,13 +4,16 @@ featured: false
 slug: product-market-fit
 title: The Importance of Product-Market Fit
 date: 2022-12-14T17:00:00.000Z
-excerpt: In the highly competitive and ever-evolving startup landscape, achieving product-market fit is often the difference between success and failure.
+excerpt: >-
+  In the highly competitive and ever-evolving startup landscape, achieving
+  product-market fit is often the difference between success and failure.
 tags:
   - startups
   - MVP
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 In the highly competitive and ever-evolving startup landscape, achieving product-market fit is often the difference between success and failure. Product-market fit refers to the alignment between a product or service and the needs, desires, and behaviors of its target market. It's the foundation upon which sustainable growth and long-term success are built.

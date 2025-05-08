@@ -3,13 +3,17 @@ id: kXVRz1
 featured: false
 title: Basic DevOps Planning for Startups
 date: 2023-07-08T17:00:00.000Z
-excerpt: As startups strive to build and deploy software applications rapidly, adopting DevOps practices has become essential for streamlining development and operations processes
+excerpt: >-
+  As startups strive to build and deploy software applications rapidly, adopting
+  DevOps practices has become essential for streamlining development and
+  operations processes
 tags:
   - startups
   - DevOps
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 DevOps, a combination of "development" and "operations," is a set of practices and cultural philosophies that aim to bridge the gap between software development and IT operations teams, enabling faster and more efficient delivery of high-quality software.

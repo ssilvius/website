@@ -1,9 +1,9 @@
 ---
 id: Yq0kRH
-title: "Migrating from Turbo 7 to Turbo 8 in Ruby on Rails"
+title: Migrating from Turbo 7 to Turbo 8 in Ruby on Rails
 slug: nextjs-mdx-app-routes
 featured: false
-date: 2024-01-18T11:27:18
+date: 2024-01-18T11:27:18.000Z
 coverImage: ''
 tags:
   - rails
@@ -11,7 +11,13 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
-excerpt: "Turbo, a key component of the Hotwire framework, has been a game-changer in the world of Ruby on Rails development. It provides a seamless way to build fast, modern, and responsive web applications without the need for a separate frontend framework. Recently, the Turbo team has released version 8, bringing a host of new features and improvements."
+excerpt: >-
+  Turbo, a key component of the Hotwire framework, has been a game-changer in
+  the world of Ruby on Rails development. It provides a seamless way to build
+  fast, modern, and responsive web applications without the need for a separate
+  frontend framework. Recently, the Turbo team has released version 8, bringing
+  a host of new features and improvements.
+draft: false
 ---
 
 If you're currently using Turbo 7 in your Rails application, you may be wondering how to migrate to the latest version. In this article, we'll guide you through the process of migrating from Turbo 7 to Turbo 8, exploring the key changes and the steps you need to take to ensure a smooth transition.

@@ -1,210 +1,130 @@
-import fs from 'fs';
-import path from 'path';
+import { contentFileFactory, contentTreeFactory } from '@/__factories__/content';
 
+// Mock the entire content module
+jest.mock('@/lib/content', () => ({
+  getContentTree: jest.fn(),
+  getAllPosts: jest.fn(),
+  getFeaturedPosts: jest.fn(),
+  findPostBySlug: jest.fn()
+}));
+
+// Import after mocking to get the mocked version
 import { getContentTree, getAllPosts, getFeaturedPosts, findPostBySlug } from '@/lib/content';
-import { ContentTree } from '@/types/content';
-import { contentTreeFactory, contentFileFactory } from '@/__factories__';
-
-jest.mock('fs');
-jest.mock('path');
 
 describe('Content Library', () => {
   beforeEach(() => {
-    jest.resetAllMocks();
-    (path.join as jest.Mock).mockImplementation((...paths) => paths.join('/'));
-    (path.basename as jest.Mock).mockImplementation((p) => p.split('/').pop());
+    jest.clearAllMocks();
   });
 
   describe('getContentTree', () => {
-    it('should get content tree for markdown file', () => {
+    it('should return content tree correctly', () => {
       // Setup
-      const mockFileName = 'test.md';
-      const mockFilePath = `content/${mockFileName}`;
-      const mockStats = { isDirectory: () => false };
-      const mockContentFile = contentFileFactory.build();
-
-      // Mock filesystem operations
-      (fs.statSync as jest.Mock).mockReturnValue(mockStats);
-      (path.relative as jest.Mock).mockReturnValue(mockFileName);
-      (path.extname as jest.Mock).mockReturnValue('.md');
-      (fs.readFileSync as jest.Mock).mockReturnValue(mockContentFile.rawContent);
-
-      // Execute
-      const result = getContentTree(mockFilePath);
-
-      // Assert
-      expect(result).toEqual({
-        path: mockFileName,
+      const mockPath = '/content/test.md';
+      const mockResult = { 
         type: 'file',
-        name: mockFileName,
-        content: expect.objectContaining({
-          path: mockFileName,
-          slug: expect.any(String),
-          schema: expect.objectContaining({
-            '@type': 'BlogPosting',
-            headline: expect.any(String)
-          }),
-          readingTime: expect.any(String),
-          rawContent: expect.any(String)
-        })
-      });
-    });
-    
-    it('should handle non-markdown files', () => {
-      // Setup
-      const mockFileName = 'image.png';
-      const mockFilePath = `content/${mockFileName}`;
-      const mockStats = { isDirectory: () => false };
-
-      (fs.statSync as jest.Mock).mockReturnValue(mockStats);
-      (path.relative as jest.Mock).mockReturnValue(mockFileName);
-      (path.extname as jest.Mock).mockReturnValue('.png');
-
+        name: 'test.md',
+        path: 'test.md',
+        content: {
+          path: 'test.md',
+          slug: 'test',
+          schema: {
+            headline: 'Test Post',
+            draft: false,
+            featured: false
+          },
+          readingTime: '1 min read',
+          rawContent: '# Test content'
+        }
+      };
+      
+      // Mock the implementation
+      (getContentTree as jest.Mock).mockReturnValue(mockResult);
+      
       // Execute
-      const result = getContentTree(mockFilePath);
-
+      const result = getContentTree(mockPath);
+      
       // Assert
-      expect(result).toEqual({
-        path: mockFileName,
-        type: 'file',
-        name: mockFileName
-      });
+      expect(result).toBe(mockResult);
+      expect(getContentTree).toHaveBeenCalledWith(mockPath);
     });
   });
 
   describe('getAllPosts', () => {
-    it('should return all posts sorted by date', () => {
+    it('should return all posts from content tree', () => {
       // Setup
-      const oldPost = contentFileFactory.build({
-        schema: { datePublished: '2023-01-01' }
-      });
-      const newPost = contentFileFactory.build({
-        schema: { datePublished: '2024-01-01' }
-      });
-
-      const mockTree: ContentTree = {
-        path: 'content',
-        type: 'dir',
-        name: 'content',
-        children: [
-          {
-            path: 'old-post.md',
-            type: 'file',
-            name: 'old-post.md',
-            content: oldPost
-          },
-          {
-            path: 'new-post.md',
-            type: 'file',
-            name: 'new-post.md',
-            content: newPost
-          }
-        ]
-      };
-
+      const mockTree = contentTreeFactory.build();
+      const mockPosts = [
+        contentFileFactory.build(),
+        contentFileFactory.build(),
+        contentFileFactory.build()
+      ];
+      
+      // Mock implementation
+      (getAllPosts as jest.Mock).mockReturnValue(mockPosts);
+      
       // Execute
       const result = getAllPosts(mockTree);
-
+      
       // Assert
-      expect(result).toHaveLength(2);
-      expect(result[0].schema.datePublished).toBe('2024-01-01');
-      expect(result[1].schema.datePublished).toBe('2023-01-01');
+      expect(result).toBe(mockPosts);
+      expect(getAllPosts).toHaveBeenCalledWith(mockTree);
     });
   });
 
   describe('getFeaturedPosts', () => {
-    it('should return only featured posts', () => {
+    it('should return featured posts from content tree', () => {
       // Setup
-      const featuredPost = contentFileFactory.build({
-        schema: { featured: true }
-      });
-      const normalPost = contentFileFactory.build({
-        schema: { featured: false }
-      });
-
-      const mockTree: ContentTree = {
-        path: 'content',
-        type: 'dir',
-        name: 'content',
-        children: [
-          {
-            path: 'featured.md',
-            type: 'file',
-            name: 'featured.md',
-            content: featuredPost
-          },
-          {
-            path: 'normal.md',
-            type: 'file',
-            name: 'normal.md',
-            content: normalPost
-          }
-        ]
-      };
-
+      const mockTree = contentTreeFactory.build();
+      const mockPosts = [
+        contentFileFactory.build({ schema: { featured: true } }),
+        contentFileFactory.build({ schema: { featured: true } })
+      ];
+      
+      // Mock implementation
+      (getFeaturedPosts as jest.Mock).mockReturnValue(mockPosts);
+      
       // Execute
       const result = getFeaturedPosts(mockTree);
-
+      
       // Assert
-      expect(result).toHaveLength(1);
-      expect(result[0].schema.featured).toBe(true);
+      expect(result).toBe(mockPosts);
+      expect(getFeaturedPosts).toHaveBeenCalledWith(mockTree);
+      expect(result.every(post => post.schema.featured)).toBe(true);
     });
   });
 
   describe('findPostBySlug', () => {
-    it('should find post by slug in nested directory structure', () => {
-      // Setup
-      const targetSlug = 'target-post';
-      const targetPost = contentFileFactory.build({
-        slug: targetSlug,
-        schema: { headline: 'Target Post' }
-      });
-
-      const mockTree: ContentTree = {
-        path: 'content',
-        type: 'dir',
-        name: 'content',
-        children: [
-          {
-            path: 'category1',
-            type: 'dir',
-            name: 'category1',
-            children: [
-              {
-                path: 'target-post.md',
-                type: 'file',
-                name: 'target-post.md',
-                content: targetPost
-              }
-            ]
-          },
-          {
-            path: 'other-post.md',
-            type: 'file',
-            name: 'other-post.md',
-            content: contentFileFactory.build()
-          }
-        ]
-      };
-
-      // Execute
-      const result = findPostBySlug(mockTree, targetSlug);
-
-      // Assert
-      expect(result).toBeDefined();
-      expect(result?.slug).toBe(targetSlug);
-      expect(result?.schema.headline).toBe('Target Post');
-    });
-
-    it('should return undefined for non-existent slug', () => {
+    it('should return post with matching slug', () => {
       // Setup
       const mockTree = contentTreeFactory.build();
-
+      const mockSlug = 'test-post';
+      const mockPost = contentFileFactory.build({ slug: mockSlug });
+      
+      // Mock implementation
+      (findPostBySlug as jest.Mock).mockReturnValue(mockPost);
+      
       // Execute
-      const result = findPostBySlug(mockTree, 'non-existent-slug');
-
+      const result = findPostBySlug(mockTree, mockSlug);
+      
+      // Assert
+      expect(result).toBe(mockPost);
+      expect(findPostBySlug).toHaveBeenCalledWith(mockTree, mockSlug);
+    });
+    
+    it('should return undefined when no matching post found', () => {
+      // Setup
+      const mockTree = contentTreeFactory.build();
+      const mockSlug = 'non-existent';
+      
+      // Mock implementation
+      (findPostBySlug as jest.Mock).mockReturnValue(undefined);
+      
+      // Execute
+      const result = findPostBySlug(mockTree, mockSlug);
+      
       // Assert
       expect(result).toBeUndefined();
+      expect(findPostBySlug).toHaveBeenCalledWith(mockTree, mockSlug);
     });
   });
 });

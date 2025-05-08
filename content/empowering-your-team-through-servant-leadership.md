@@ -4,7 +4,8 @@ featured: false
 slug: empowering-your-team-through-servant-leadership
 title: Empowering Your Team Through Servant Leadership
 date: 2022-11-09T15:00:00.000Z
-excerpt: Empowering your team is a fundamental aspect of servant leadership. It
+excerpt: >-
+  Empowering your team is a fundamental aspect of servant leadership. It
   involves creating an environment where team members feel valued, supported,
   and encouraged to take ownership and initiative.
 tags:
@@ -15,6 +16,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 As a servant leader, one of your primary goals is to unlock the full potential of your team by providing them with the resources, autonomy, and guidance they need to succeed. This not only leads to higher levels of engagement and productivity but also fosters a culture of trust and accountability.

@@ -3,9 +3,10 @@ id: gTbS8l
 slug: building-trust-servant-leader
 featured: false
 title: Building Trust as a Servant Leader
-date: 2023-1-04T12:00:00.000Z
-excerpt: Trust is the foundation upon which successful teams and organizations
-  are built. As a servant leader, cultivating and maintaining trust in your team
+date: 2023-01-04T12:00:00.000Z
+excerpt: >-
+  Trust is the foundation upon which successful teams and organizations are
+  built. As a servant leader, cultivating and maintaining trust in your team
   members are essential
 tags:
   - leadership
@@ -15,6 +16,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 Creating an environment where people feel empowered, motivated, and committed to shared goals is based on trust, not a foosball table or free beer.

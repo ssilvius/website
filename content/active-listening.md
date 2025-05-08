@@ -1,10 +1,11 @@
 ---
 id: aLUdAN
 featured: false
-title: "Active Listening: A Servant Leader's Superpower"
-date: 2023-1-1T12:00:00.000Z
-excerpt: In the fast-paced and often chaotic world of business, effective
-  communication is essential for success.
+title: 'Active Listening: A Servant Leader''s Superpower'
+date: 2023-01-01T12:00:00.000Z
+excerpt: >-
+  In the fast-paced and often chaotic world of business, effective communication
+  is essential for success.
 tags:
   - leadership
   - servant leadership
@@ -13,6 +14,7 @@ tags:
 author:
   name: Sean Silvius
   picture: /images/profile.jpg
+draft: false
 ---
 
 True communication goes beyond simply speaking; it requires active listening, a critical skill that servant leaders must master.
