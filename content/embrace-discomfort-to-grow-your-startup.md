@@ -2,7 +2,7 @@
 id: r9KwJP
 slug: embrace-discomfort-to-grow-your-startup
 featured: true
-draft: true
+draft: false
 title: "Embrace Discomfort To Grow"
 date: 2025-05-07T10:23:47.000Z
 excerpt: Growth happens at the edges of your comfort zone. Not beside it. Not near it. Right at the ragged edge where your palms sweat and your mind races with doubt.

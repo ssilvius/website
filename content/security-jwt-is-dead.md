@@ -1,7 +1,7 @@
 ---
 id: k673z1
 featured: true
-draft: true
+draft: false
 title: "JWT is Dead, Long Live PASETO"
 date: 2025-02-15T14:37:21.000Z
 excerpt: "JWT had a good run, but it's time to move on. If you're still using JWT for authorization tokens, you're living with unnecessary security risks. My current project, I've moved back to 'old school' session tokens so I don't have the headache of JWT. I wondered if anyone has solved this problem and I found where we're going to go."

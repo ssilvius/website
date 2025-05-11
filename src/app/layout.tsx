@@ -15,6 +15,17 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const arvoRegular = localFont({
+  src: "./fonts/Arvo-Regular.ttf",
+  variable: "--font-arvo-regular",
+  weight: "400",
+});
+
+const arvoBold = localFont({
+  src: "./fonts/Arvo-Bold.ttf",
+  variable: "--font-arvo-bold",
+  weight: "700",
+});
 
 export const metadata: Metadata = {
   title: "sean.silvius.me",
@@ -28,11 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ clsx(geistSans.variable, geistMono.variable, 'text-lg h-full bg-no-repeat bg-gradient-to-br from-indigo-100 via-white to-cyan-100' ) }>
+      <body className={ clsx(geistSans.variable, geistMono.variable, arvoRegular.variable, arvoBold.variable, 'text-lg h-full bg-slate-50') }>
         <TopBar />
-        <div className="page mx-auto max-w-7xl py-32">
           {children}
-        </div>
         <Footer />
       </body>
     </html>

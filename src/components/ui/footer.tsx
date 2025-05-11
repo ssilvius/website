@@ -1,6 +1,8 @@
+import Link from "next/link";
+import Image from "next/image";
 import { Factory } from 'lucide-react';
 import dayjs from 'dayjs';
-
+/**
 const navigation = [
   {
     name: 'Linkedin',
@@ -27,24 +29,50 @@ const navigation = [
     ),
   },
 ]
-
+*/
 export default function Footer() {
   const year = dayjs(new Date).format('YYYY');
 
   return (
-    <footer className="relative w-full mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-      <div className="flex justify-center space-x-6 md:order-2">
-        {navigation.map((item) => (
-          <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only">{item.name}</span>
-            <item.icon className="h-6 w-6" aria-hidden="true" />
-          </a>
-        ))}
+    <footer className="border-t border-slate-200 bg-slate-900 py-12 text-slate-100 relative">
+      <div className="absolute left-0 top-0 w-full h-full flex items-center justify-start pointer-events-none">
+        <div className="ml-8 fill-amber-400">
+          <Image src="/logo.svg" alt="Logo Watermark" width={384} height={384} className="-ml-16" />
+        </div>
       </div>
-      <div className="mt-8 md:order-1 md:mt-0">
-        <p className="inline-flex text-center text-center leading-5 text-gray-500">
-          &copy; { year } Sean Silvius. <Factory className="h-5 w-5 ml-4 mr-1" /> Made in the PNW.
-        </p>
+      <div className="container mx-auto px-4 relative z-10 max-w-7xl">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-amber-400 font-heading">Site</h3>
+            <nav className="flex flex-col space-y-2">
+              <Link href="/" className="text-slate-100 hover:text-amber-300">Home</Link>
+              <Link href="/posts" className="text-slate-100 hover:text-amber-300">Articles</Link>
+              <Link href="/connect" className="text-slate-100 hover:text-amber-300">Connect</Link>
+            </nav>
+          </div>
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-amber-400">Connect</h3>
+            <nav className="flex flex-col space-y-2">
+              <Link href="https://github.com/ssilvius" target="_blank" rel="noopener noreferrer" className="text-slate-100 hover:text-amber-300">GitHub</Link>
+              <Link href="https://www.linkedin.com/in/seansilvius/" target="_blank" rel="noopener noreferrer" className="text-slate-100 hover:text-amber-300">LinkedIn</Link>
+            </nav>
+          </div>
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-amber-400">Legal</h3>
+            <nav className="flex flex-col space-y-2">
+              <Link href="/privacy" className="text-slate-100 hover:text-amber-300">Privacy Policy</Link>
+              <Link href="/terms" className="text-slate-100 hover:text-amber-300">Terms of Service</Link>
+            </nav>
+          </div>
+        </div>
+        <div className="mt-8 border-t border-slate-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-slate-300">© { year } Sean Silvius. All rights reserved.</p>
+            <p className="mt-4 md:mt-0 text-slate-300">
+              Built with love in the PNW <Factory />
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   );

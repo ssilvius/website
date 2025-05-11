@@ -39,33 +39,37 @@ export default async function PostPage({ params }: { params: { slug: string } })
   return (
     <Suspense fallback={<Skeleton />}>
       <SchemaJsonLd schema={schema} />
-      <article className="container mx-auto px-4 py-8">
-      <section className="mb-8">
-        <div className="flex items-center justify-between">
-          <div className="text-xs font-medium mb-2 flex-grow">{schema.headline}</div>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime={schema.datePublished}>
-              {new Date(schema.datePublished).toLocaleDateString()}
-            </time>
-            <span>•</span>
-            <span>{post.readingTime}</span>
+      <article className="container mx-auto mt-16 md:mt-24 px-4 py-8 max-w-7xl">
+        <section className="mb-12">
+          <div className="flex flex-row gap-4">
+            <div className="mb-6">
+              <div className="text-slate-900 mb-4 uppercase">{schema.headline}</div>
+              <div className="flex items-center gap-3 text-sm text-slate-500">
+                <time dateTime={schema.datePublished}>
+                  {new Date(schema.datePublished).toLocaleDateString()}
+                </time>
+                <span>•</span>
+                <span>{post.readingTime}</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-        <h1 className="mb-8 text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="mb-8 font-heading font-semibold text-5xl text-slate-900 tracking-wide">
           {schema.description}
-        </h1>
-        <div className="mb-8 relative aspect-video">
+        </p>
+        <div className="mb-12 relative aspect-video">
           <Image
             src={`/images/${params.slug}.png`}
             alt={`Image for ${schema.headline}`}
             fill
-            className="object-cover rounded-lg"
+            className="object-cover shadow-md"
           />
         </div>
 
-        <Mdx source={schema.articleBody} />
+        <div className="prose prose-lg prose-slate max-w-none prose-headings:font-heading prose-headings:text-slate-900 prose-headings:uppercase prose-strong:text-slate-900">
+          <Mdx source={schema.articleBody} />
+        </div>
       </article>
     </Suspense>
   );

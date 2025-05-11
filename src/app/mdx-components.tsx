@@ -6,25 +6,25 @@ const components: MDXComponents = {
   // Headings
   h1: ({ className = '', ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h1 
-      className={`scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-8 ${className}`}
+      className={`scroll-m-20 text-7xl font-heading lg:text-5xl mb-8 ${className}`}
       {...props}
     />
   ),
   h2: ({ className = '', ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h2 
-      className={`scroll-m-20 text-3xl font-semibold tracking-tight mt-10 mb-4 ${className}`}
+      className={`scroll-m-20 text-3xl font-heading mt-10 mb-4 ${className}`}
       {...props}
     />
   ),
   h3: ({ className = '', ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h3 
-      className={`scroll-m-20 text-2xl font-semibold tracking-tight mt-8 mb-4 ${className}`}
+      className={`scroll-m-20 text-2xl font-heading tracking-tight mt-8 mb-4 ${className}`}
       {...props}
     />
   ),
   h4: ({ className = '', ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h4 
-      className={`scroll-m-20 text-xl font-semibold tracking-tight mt-6 mb-4 ${className}`}
+      className={`scroll-m-20 text-xl font-heading mt-6 mb-4 ${className}`}
       {...props}
     />
   ),
@@ -32,19 +32,19 @@ const components: MDXComponents = {
   // Paragraph and text elements
   p: ({ className = '', ...props }: HTMLAttributes<HTMLParagraphElement>) => (
     <p 
-      className={`leading-7 [&:not(:first-child)]:mt-6 mb-4 ${className}`}
+      className={`leading-7 text-slate-700 [&:not(:first-child)]:mt-6 mb-4 ${className}`}
       {...props}
     />
   ),
   strong: ({ className = '', ...props }: HTMLAttributes<HTMLElement>) => (
     <strong 
-      className={`font-semibold ${className}`}
+      className={`font-semibold text-blue-900 ${className}`}
       {...props}
     />
   ),
   em: ({ className = '', ...props }: HTMLAttributes<HTMLElement>) => (
     <em 
-      className={`italic ${className}`}
+      className={`italic text-slate-700 ${className}`}
       {...props}
     />
   ),
@@ -52,13 +52,13 @@ const components: MDXComponents = {
   // Lists
   ul: ({ className = '', ...props }: HTMLAttributes<HTMLUListElement>) => (
     <ul 
-      className={`my-6 ml-6 list-disc [&>li]:mt-2 ${className}`}
+      className={`my-6 ml-6 list-disc text-slate-700 [&>li]:mt-2 ${className}`}
       {...props}
     />
   ),
   ol: ({ className = '', ...props }: HTMLAttributes<HTMLOListElement>) => (
     <ol 
-      className={`my-6 ml-6 list-decimal [&>li]:mt-2 ${className}`}
+      className={`my-6 ml-6 list-decimal text-slate-700 [&>li]:mt-2 ${className}`}
       {...props}
     />
   ),

@@ -3,14 +3,23 @@ import type { Config } from "tailwindcss";
 const config: Config = {
     darkMode: ["class"],
     content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
+  theme: {  	borderWidth: {
+      DEFAULT: '1px',
+      '0': '0',
+      '2': '2px',
+      '3': '3px',
+      '4': '4px',
+      '6': '6px',
+      '8': '8px',
+    },
   	extend: {
   		fontFamily: {
   			mono: ["var(--font-geist-mono)", "system-ui", "sans-serif"],
-  			default: ["var(--font-geist-sans)", "system-ui", "sans-serif"]
+  			default: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+				display: ["var(--font-arvo-bold)", "serif"],
+				heading: ["var(--font-arvo-regular)", "serif"],
   		},
   		colors: {
   			background: 'hsl(var(--background))',
@@ -55,9 +64,9 @@ const config: Config = {
   			}
   		},
   		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
+  			lg: '0.5rem',
+  			md: '0.375rem',
+  			sm: '0.25rem'
   		},
   		animation: {
   			'fade-up': 'fade-up 0.5s',
