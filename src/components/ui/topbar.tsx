@@ -3,7 +3,6 @@
 import Link from "next/link"
 import clsx from "clsx"
 import useScroll from "@/lib/hooks/use-scroll";
-import Image from "next/image";
 
 export default function TopBar() {
   const scrolled = useScroll(64);
