@@ -24,7 +24,7 @@ const RefinedCardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CardHeader
     ref={ref}
-    className={cn("p-6 bg-slate-900", className)}
+    className={cn("m-0 p-0 bg-slate-900", className)}
     {...props}
   />
 ))
@@ -36,7 +36,7 @@ const RefinedCardTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CardTitle
     ref={ref}
-    className={cn("text-2xl font-bold text-amber-400", className)}
+    className={cn("m-0 p-0 text-2xl font-bold text-amber-400", className)}
     {...props}
   />
 ))
@@ -58,7 +58,7 @@ const RefinedCardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <CardContent ref={ref} className={cn("p-6 pt-0 flex-grow", className)} {...props} />
+  <CardContent ref={ref} className={cn("m-0 p-0 flex-grow", className)} {...props} />
 ))
 RefinedCardContent.displayName = "RefinedCardContent"
 
@@ -68,7 +68,7 @@ const RefinedCardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CardFooter
     ref={ref}
-    className={cn("flex justify-end items-center p-6 pt-0 mt-auto", className)}
+    className={cn("flex justify-end items-centerpt-0 mt-auto", className)}
     {...props}
   />
 ))

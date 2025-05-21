@@ -5,13 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ContentFile } from '@/types/content';
 import {
-  RefinedCard,
-  RefinedCardContent,
-  RefinedCardDescription,
-  RefinedCardFooter,
-  RefinedCardHeader,
-  RefinedCardTitle
-} from "@/components/ui/refined-card"
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/featured-card"
 
 export const metadata = {
   title: 'Articles | Sean Silvius',
@@ -73,46 +73,46 @@ export default async function Pages(): Promise<React.ReactElement> {
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post) => (
-                  <RefinedCard key={post.slug}>
-                    <div className='relative aspect-video'>
-                      <Image
-                        src={`/images/${post.slug}.png`}
-                        alt={`Image for ${post.schema.headline}`}
-                        fill
-                        className="object-cover shadow-sm"
-                      />
-                    </div>
-                    <RefinedCardHeader>
-                      <RefinedCardTitle>
-                        <Link href={`/posts/${post.slug}`} className="hover:underline">
+                  <Card key={post.slug}>
+                    <Link href={`/posts/${post.slug}`}>
+                        <div className='relative aspect-video'>
+                          <Image
+                            src={`/images/${post.slug}.png`}
+                            alt={`Image for ${post.schema.headline}`}
+                            fill
+                            className="object-cover shadow-sm"
+                          />
+                        </div>
+                      <CardHeader>
+                        <CardTitle>
                           {post.schema.headline}
-                        </Link>
-                      </RefinedCardTitle>
-                      <RefinedCardDescription>
-                        <time dateTime={post.schema.datePublished}>
-                          {new Date(post.schema.datePublished).toLocaleDateString()}
-                        </time>
-                        <span> • </span>
-                        <span>{post.readingTime}</span>
-                      </RefinedCardDescription>
-                    </RefinedCardHeader>
-                    <RefinedCardContent>
-                      <p className="mt-2">{post.schema.description}</p>
-                    </RefinedCardContent>
-                    <RefinedCardFooter>
+                        </CardTitle>
+                        <CardDescription>
+                          <time dateTime={post.schema.datePublished}>
+                            {new Date(post.schema.datePublished).toLocaleDateString()}
+                          </time>
+                          <span> • </span>
+                          <span>{post.readingTime}</span>
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="mt-2">{post.schema.description}</p>
+                      </CardContent>
+                      </Link>
+                    <CardFooter>
                       <Link 
                         href={`/posts/${post.slug}`} 
                         className="bg-slate-900 text-white px-4 py-2 font-bold uppercase hover:bg-slate-800 transition-all duration-200"
                       >
                         READ MORE
                       </Link>
-                    </RefinedCardFooter>
-                  </RefinedCard>
+                    </CardFooter>
+                  </Card>
                 ))}
                 
                 {/* Add placeholder card for current year (2025) if less than 3 articles */}
                 {year === "2025" && posts.length < 3 && (
-                  <RefinedCard>
+                  <Card>
                     <div className='relative aspect-video bg-amber-50 flex items-center justify-center'>
                       <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600">
                         <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"/>
@@ -123,29 +123,29 @@ export default async function Pages(): Promise<React.ReactElement> {
                         <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/>
                       </svg>
                     </div>
-                    <RefinedCardHeader>
-                      <RefinedCardTitle>
+                    <CardHeader>
+                      <CardTitle>
                         <span className="animate-pulse">Something New in the Works</span>
-                      </RefinedCardTitle>
-                      <RefinedCardDescription>
+                      </CardTitle>
+                      <CardDescription>
                         <time dateTime={new Date().toISOString()}>
                           {new Date().toLocaleDateString()}
                         </time>
                         <span> • </span>
                         <span>Coming soon</span>
-                      </RefinedCardDescription>
-                    </RefinedCardHeader>
-                    <RefinedCardContent>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
                       <p className="mt-2">I&apos;m writing something that matters. No fluff, no filler; just honest thoughts that might help you see things differently. Worth the wait.</p>
-                    </RefinedCardContent>
-                    <RefinedCardFooter>
+                    </CardContent>
+                    <CardFooter>
                       <div 
                         className="bg-slate-300 text-slate-600 px-4 py-2 font-bold uppercase cursor-not-allowed"
                       >
                         STAY TUNED
                       </div>
-                    </RefinedCardFooter>
-                  </RefinedCard>
+                    </CardFooter>
+                  </Card>
                 )}
               </div>
             </div>
