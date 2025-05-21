@@ -1,4 +1,4 @@
-// filepath: /home/sean/projects/ssilvius/website/src/app/posts/page.tsx
+import React from 'react';
 import { notFound } from 'next/navigation';
 import { getContentTree, getAllPosts } from '@/lib/content';
 import Link from 'next/link';
@@ -43,7 +43,7 @@ function groupPostsByYear(posts: ReadonlyArray<ContentFile>) {
     .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA));
 }
 
-export default async function Pages() {
+export default async function Pages(): Promise<React.ReactElement> {
   const contentTree = getContentTree();
   const pages: ReadonlyArray<ContentFile> = getAllPosts(contentTree);
 

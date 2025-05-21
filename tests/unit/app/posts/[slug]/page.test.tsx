@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import PostPage from '@/app/posts/[slug]/page';
 import { getContentTree, findPostBySlug } from '@/lib/content';
 import { notFound } from 'next/navigation';
-import { contentTreeFactory, contentFileFactory } from '@/__factories__';
+import { contentTreeFactory, contentFileFactory } from '../../../../factories/content';
 
 // Mock next/navigation
 jest.mock('next/navigation', () => ({
