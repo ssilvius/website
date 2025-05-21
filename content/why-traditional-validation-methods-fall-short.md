@@ -5,7 +5,7 @@ slug: why-traditional-validation-methods-fall-short
 title: "Forget MVPs: Here's How to Really Validate an Idea"
 date: 2025-05-21T11:00:00.000Z
 excerpt: >-
-  MVPs are overrated. Most end up as abandoned projects nobody asked for. Here's the truth: you can validate any idea with $500, a landing page, and a week of real conversations. Skip the code. Skip the wireframes. Just ask people if they'd pay — then believe their actions, not their words.
+  MVPs are overrated. Most end up as abandoned projects nobody asked for. Here's the truth: you can validate any idea with $500, a landing page, and a week of real conversations. Skip the code. Skip the wireframes. Just ask people if they'd pay; then believe their actions, not their words.
 tags:
   - startups
   - validation
