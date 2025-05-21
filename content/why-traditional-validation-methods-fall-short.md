@@ -2,7 +2,7 @@
 id: L7Kp45
 featured: true
 slug: why-traditional-validation-methods-fall-short
-title: Forget MVPs: Here's How to Really Validate an Idea
+title: "Forget MVPs: Here's How to Really Validate an Idea"
 date: 2025-05-21T11:00:00.000Z
 excerpt: >-
   MVPs are overrated. Most end up as abandoned projects nobody asked for. Here's the truth: you can validate any idea with $500, a landing page, and a week of real conversations. Skip the code. Skip the wireframes. Just ask people if they'd pay — then believe their actions, not their words.
@@ -26,9 +26,9 @@ Here's the truth: most startup ideas are bad. Not because founders are stupid, b
 
 All you need is yourself and 30-50 potential users from the demographics you *think* would use your product. No personas. No journey maps. That fancy stuff comes later, if at all. Keep it simple now, or you'll just cloud your judgment with complexity.
 
-1. Talk to these 30-50 people. Find them on Reddit, Slack channels, Discord, WhatsApp, or even on the street—wherever you'll find your core customers.
+1. Talk to these 30-50 people. Find them on Reddit, Slack channels, Discord, WhatsApp, or even on the street. Wherever you'll find your core customers, go to them.
 
-   **Pro tip:** When approaching these people, don't pitch your solution yet. That's a rookie mistake. Just ask about their problems. Say something like, "I'm researching challenges people face with [problem area]" rather than "I'm building a tool that does X." Most people jump straight to solutions before truly understanding the problem. Don't do that. Let them tell you what's broken before you try to fix it.
+   **Pro tip:** When approaching these people, don't pitch your solution yet. it's a trap! Just ask about their problems. Say something like, *"I'm researching challenges people face with [problem area]"* rather than *"I'm building a tool that does X."* Most people jump straight to solutions before truly understanding the problem. Don't do that. Let them tell you what's broken before you try to fix it.
 
 2. As you talk with them, record everything. (I'm thinking about writing software for this purpose.) Capture voice, video, and save the pages where discussions take place. Put it all into a CRM-style spreadsheet or tracking tool. This allows you to summarize, categorize, and distill the three key things they all said would make their lives better. This is where your time investment is most valuable.
 
@@ -39,7 +39,7 @@ All you need is yourself and 30-50 potential users from the demographics you *th
    - What would an ideal solution look like to them?
    - How valuable would solving this problem be? Get them to quantify it.
 
-   Look for patterns. When three different people independently mention the same pain point without you asking about it directly—that's not coincidence. That's a signal. Pay attention to it.
+   Look for patterns. When three different people independently mention the same pain point without you asking about it directly; that's not coincidence. That's a signal. Pay attention to it.
 
 3. Open up your favorite landing page builder: Wix, Figma Sites, Cursor, or whatever works for you. Create a landing page that offers a solution for those three features everyone mentioned would improve their lives. Collect email addresses, use a Cal.com meetings scheduler, or whatever method you prefer to get people ready to engage.
 
@@ -72,7 +72,7 @@ All you need is yourself and 30-50 potential users from the demographics you *th
 
 7. If you can manage a 5% click-through rate, you might have a unicorn. Around 2% or better means your idea is validated! Less than 2%? Scrap it and move on with a maximum loss of about $500.
 
-# Reading Between the Lines
+## Reading Between the Lines
 
 Remember that people are naturally polite. "That sounds interesting" usually means "I'll never use this." Don't confuse politeness with validation. Look for strong positive signals:
 - They try to sign up on the spot
@@ -83,7 +83,7 @@ Remember that people are naturally polite. "That sounds interesting" usually mea
 
 These behaviors—not just words—validate genuine interest. If you're not seeing these reactions, you don't have product-market fit yet. Keep iterating or move on.
 
-# Avoiding Common Validation Mistakes
+## Avoiding Common Validation Mistakes
 
 - **Confirmation bias**: Most founders only hear what they want to hear. Don't do that. Listen objectively, especially to negative feedback.
 - **Feature creep**: Stay focused on validating the core value proposition, not a list of features. One solid solution to one real problem is better than ten half-baked ideas.
@@ -91,7 +91,7 @@ These behaviors—not just words—validate genuine interest. If you're not seei
 - **Premature scaling**: Don't increase ad spend until you've proven people actually convert. Throwing more money at a bad idea just burns cash faster.
 - **Ignoring objections**: When potential users point out problems, they're giving you valuable data. Those objections are gold.
 
-# From Validation to Launch
+## From Validation to Launch
 
 I've seen countless founders waste six months building something nobody wants. Don't be that person. This process helps you validate ideas in weeks, not months. One startup I advised tested three different concepts this way, quickly killed two that got poor engagement, and focused on the one that resonated. Six months later, they had paying customers and were 100% bootstrapped, they probably will never need funding.
 
