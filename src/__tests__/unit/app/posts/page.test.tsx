@@ -65,8 +65,8 @@ describe('Pages Component', () => {
     await renderPages();
     
     // Check for the heading and description
-    expect(screen.getByText('index')).toBeInTheDocument();
-    expect(screen.getByText('collection of things I\'ve written down for some reason or another — mostly because I can\'t believe I had to say it in the first place.')).toBeInTheDocument();
+    expect(screen.getByText('Articles')).toBeInTheDocument();
+    expect(screen.getByText(/Collection of things I've written down for some reason or another/)).toBeInTheDocument();
     
     // Check for the mock post content
     expect(screen.getByText('Crudelis alias vergo valeo deprecator tracto aro.')).toBeInTheDocument();
