@@ -3,10 +3,15 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Pages from '@/app/posts/page'
 import { getContentTree, getAllPosts } from '@/lib/content'
-import { contentTreeFactory, contentFileFactory } from '@/__factories__';
-import { notFound } from "next/navigation";
+import { contentTreeFactory, contentFileFactory } from '../../../factories/content';
 
-jest.mock('next/navigation', () => ({ notFound: jest.fn(), }));
+// Mock modules
+const mockNotFound = jest.fn();
+jest.mock('next/navigation', () => ({
+  get notFound() {
+    return mockNotFound;
+  }
+}));
 
 jest.mock('@/lib/content', () => ({
   getContentTree: jest.fn(),
@@ -52,8 +57,8 @@ describe('Pages Component', () => {
   });
 
   beforeEach(() => {
-    (getContentTree as jest.Mock).mockReturnValue(contentTreeFactory.build());
-    (getAllPosts as jest.Mock).mockReturnValue([mockPost]);
+    (getContentTree as jest.MockedFunction<typeof getContentTree>).mockReturnValue(contentTreeFactory.build());
+    (getAllPosts as jest.MockedFunction<typeof getAllPosts>).mockReturnValue([mockPost]);
   });
 
   const renderPages = async () => {
@@ -72,12 +77,10 @@ describe('Pages Component', () => {
     expect(screen.getByText('Crudelis alias vergo valeo deprecator tracto aro.')).toBeInTheDocument();
     expect(screen.getByText('Delinquo culpa doloremque adulescens. Cupiditas arto summisse apparatus demergo. Thesis advoco subseco absconditus admoneo.')).toBeInTheDocument();
     expect(screen.getByText('10/26/2024')).toBeInTheDocument();
-  });
-
-  it('renders the notFound page when there are no pages', async () => {
-    (getAllPosts as jest.Mock).mockReturnValue([]); 
-    await renderPages(); 
+  });  it('renders the notFound page when there are no pages', async () => {
+    (getAllPosts as jest.MockedFunction<typeof getAllPosts>).mockReturnValue([]); 
+    await renderPages();
     
-    expect(notFound).toHaveBeenCalled();
+    expect(mockNotFound).toHaveBeenCalled();
   });
 });

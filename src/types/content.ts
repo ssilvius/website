@@ -52,3 +52,15 @@ export interface ContentFile {
   readingTime: string;
   rawContent: string;
 }
+
+export interface PostParams {
+  slug: string;
+}
+
+export interface PostPageProps {
+  params: Promise<PostParams>;
+}
+
+export interface PostListPageProps {
+  searchParams?: Record<string, string | string[] | undefined>;
+}

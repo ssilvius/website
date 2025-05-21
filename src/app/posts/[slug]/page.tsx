@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SchemaMetadata, SchemaJsonLd } from '@/lib/metadata';
 import { Skeleton } from '@/components/ui/skeleton';
 import { getContentTree, getAllPosts, findPostBySlug } from '@/lib/content';
+import { ContentFile, PostPageProps } from '@/types/content';
 
 export async function generateStaticParams() {
   const contentTree = getContentTree();
@@ -15,7 +16,7 @@ export async function generateStaticParams() {
   }));
 }
 
-async function getPost(slug: string) {
+async function getPost(slug: string): Promise<ContentFile> {
   const contentTree = getContentTree();
   const post = findPostBySlug(contentTree, slug);
   
@@ -27,14 +28,16 @@ async function getPost(slug: string) {
 }
 
 export async function generateMetadata(
-  { params }: { params: { slug: string } }
+  { params }: PostPageProps
 ): Promise<Metadata> {
-  const post = await getPost(params.slug);
+  const { slug } = await params;
+  const post = await getPost(slug);
   return SchemaMetadata(post.schema);
 }
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug);
+export default async function PostPage({ params }: PostPageProps): Promise<React.ReactElement> {
+  const { slug } = await params;
+  const post = await getPost(slug);
   const { schema } = post;
   return (
     <Suspense fallback={<Skeleton />}>
@@ -60,7 +63,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
         </p>
         <div className="mb-12 relative aspect-video">
           <Image
-            src={`/images/${params.slug}.png`}
+            src={`/images/${post.slug}.png`}
             alt={`Image for ${schema.headline}`}
             fill
             className="object-cover shadow-md"

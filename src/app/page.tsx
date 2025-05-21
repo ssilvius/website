@@ -4,13 +4,13 @@ import { ArrowRight } from 'lucide-react';
 import { Suspense } from 'react';
 import { getContentTree, getFeaturedPosts } from '@/lib/content';
 import {
-  RefinedCard,
-  RefinedCardContent,
-  RefinedCardDescription,
-  RefinedCardFooter,
-  RefinedCardHeader,
-  RefinedCardTitle
-} from "@/components/ui/refined-card"
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/featured-card"
 
 export const metadata = {
   title: 'sean.silvius.me',
@@ -23,17 +23,15 @@ export default async function HomePage() {
 
   return (
     <main className='w-full'>
-      <div className='container mx-auto max-w-5xl px-4 md:px-8 lg:px-16 lg:py-64'>
+      <div className='container mx-auto max-w-5xl px-4 pt-16 pb-4 lg:py-32'>
         <header role="banner">
           <h1
-            className="animate-fade-up font-heading text-center font-semibold text-5xl md:text-6xl lg:text-7xl text-blue-900 mx-auto max-w-7xl opacity-0 duration-500 transition-all"
-            style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
+            className="animate-in fade-in font-heading text-center font-semibold text-2xl md:text-4xl lg:text-7xl mb-4 lg:mb-8 text-blue-900 mx-auto max-w-7xl duration-300 ease-in delay-100 fill-mode-forwards"
           >
             Hi. I build complex things in a simple manner. With bits and bytes, with wood.
           </h1>
           <h2 
-            className="mt-10 text-lg md:text-xl lg:text-2xl animate-fade-up text-slate-600 max-w-7xl mx-auto opacity-0"
-            style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+            className="animate-in fade-in font-medium text-slate-600 lg:text-2xl max-w-7xl mx-auto duration-600 ease-in delay-100 fill-mode-forwards"
           >
             I log the things that have interested me, hopefully someone will find some of what I&apos;ve learned useful in their own endevors. I tend to make mistakes and adjust just as any student of life does. Those mistakes are really the important things.
           </h2>
@@ -47,41 +45,43 @@ export default async function HomePage() {
             </h2>
             <div role="grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {latestPosts.map((post) => (
-                <RefinedCard key={post.slug} role="article" tabIndex={0}>
-                  <div className='relative aspect-video'>
-                    <Image
-                      src={`/images/${post.slug}.png`}
-                      alt={`Image for ${post.schema.headline}`}
-                      fill
-                      className="object-cover shadow-sm"
-                    />
-                  </div>
-                  <RefinedCardHeader>
-                    <RefinedCardTitle>
-                      <Link href={`/posts/${post.slug}`} className="hover:underline">
-                        {post.schema.headline}
+                <section key={post.slug}>
+                    <Card role="article" tabIndex={0}>
+                      <Link href={`/posts/${post.slug}`}>
+                        <div className='relative aspect-video'>
+                          <Image
+                            src={`/images/${post.slug}.png`}
+                            alt={`Image for ${post.schema.headline}`}
+                            fill
+                            className="object-cover shadow-sm"
+                          />
+                        </div>
+                        <CardHeader>
+                          <CardTitle>
+                              {post.schema.headline}
+                          </CardTitle>
+                          <CardDescription>
+                            <time dateTime={post.schema.datePublished}>
+                              {new Date(post.schema.datePublished).toLocaleDateString()}
+                            </time>
+                            <span> • </span>
+                            <span>{post.readingTime}</span>
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p className='mt-2 md:mt-4 lg:mt-8 transition-all'>{post.schema.description}</p>
+                        </CardContent>
                       </Link>
-                    </RefinedCardTitle>
-                    <RefinedCardDescription>
-                      <time dateTime={post.schema.datePublished}>
-                        {new Date(post.schema.datePublished).toLocaleDateString()}
-                      </time>
-                      <span> • </span>
-                      <span>{post.readingTime}</span>
-                    </RefinedCardDescription>
-                  </RefinedCardHeader>
-                  <RefinedCardContent>
-                    <p className='mt-2 md:mt-4 lg:mt-8 transition-all'>{post.schema.description}</p>
-                  </RefinedCardContent>
-                  <RefinedCardFooter>
-                    <Link 
-                      href={`/posts/${post.slug}`} 
-                      className="bg-blue-600 text-white px-4 py-2 font-bold uppercase hover:bg-blue-700 transition-all duration-200"
-                    >
-                      READ MORE
-                    </Link>
-                  </RefinedCardFooter>
-                </RefinedCard>
+                      <CardFooter>
+                        <Link 
+                          href={`/posts/${post.slug}`} 
+                          className="bg-blue-600 text-white px-4 py-2 font-bold uppercase hover:bg-blue-700 transition-all duration-200"
+                        >
+                          READ MORE
+                        </Link>
+                      </CardFooter>
+                    </Card>
+                </section>
               ))}
             </div>
             <div className='mt-12 text-right'>

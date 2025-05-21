@@ -1,4 +1,4 @@
-import { contentFileFactory, contentTreeFactory } from '@/__factories__/content';
+import { contentFileFactory, contentTreeFactory } from '../../factories/content';
 
 // Mock the entire content module
 jest.mock('@/lib/content', () => ({
