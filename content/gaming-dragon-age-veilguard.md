@@ -2,7 +2,7 @@
 id: keoRz1
 featured: true
 draft: false
-title: "Dragon Age: Veilguard – A Beautiful But Hollow Return to Thedas"
+title: "Dragon Age: Veilguard: A Beautiful But Hollow Return to Thedas"
 date: 2024-10-31T17:00:00.000Z
 excerpt: After nearly a decade of waiting and multiple development pivots, Dragon Age returns with Veilguard. While visually stunning and mechanically competent, does it recapture the depth and narrative impact that made the series legendary? Nah.
 tags:

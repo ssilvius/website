@@ -23,13 +23,6 @@ export default function TopBar() {
         <nav role="menubar" className="mx-5 flex h-16 max-w-7xl items-center justify-between w-full">
           <div className="mr-8">
             <Link href="/" role="menuitem" className="flex items-center text-lg font-bold uppercase tracking-tight">
-              <Image 
-                src={`./logo.svg`} 
-                alt="Logo"
-                width={24} 
-                height={24}
-                className="mr-2"
-              />
               <p className={clsx(
                 scrolled && 'text-black',
                 !scrolled && 'text-black'

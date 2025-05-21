@@ -36,9 +36,6 @@ export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-900 py-12 text-slate-100 relative">
       <div className="absolute left-0 top-0 w-full h-full flex items-center justify-start pointer-events-none">
-        <div className="ml-8 fill-amber-400">
-          <Image src="/logo.svg" alt="Logo Watermark" width={384} height={384} className="-ml-16" />
-        </div>
       </div>
       <div className="container mx-auto px-4 relative z-10 max-w-7xl">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
