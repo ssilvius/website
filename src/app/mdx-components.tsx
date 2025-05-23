@@ -1,8 +1,34 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { MDXComponents } from 'mdx/types';
 import { DetailedHTMLProps, AnchorHTMLAttributes, HTMLAttributes } from 'react';
+import FlowchartView from '@/components/flowchart-view';
+import ConversationView from '@/components/conversation-view';
+import UnsafeDashboard from '@/components/unsafe-dashboard';
+import SafeDashboard from '@/components/safe-dashboard';
+import DashboardComparison from '@/components/dashboard-comparison';
+import InterventionResults from '@/components/intervention-results';
+import ContentSection from '@/components/content-section';
+import TechnicalOnboardingFlow from '@/components/technical-onboarding-flow';
+import UserCenteredOnboardingFlow from '@/components/user-centered-onboarding-flow';
+import OnboardingAnalyticsDashboard from '@/components/onboarding-analytics-dashboard';
+import OnboardingSuccessMetrics from '@/components/onboarding-success-metrics';
+import UserCenteredToolkit from '@/components/user-centered-toolkit';
 
 const components: MDXComponents = {
+  // Custom components
+  FlowchartView,
+  ConversationView,
+  UnsafeDashboard,
+  SafeDashboard,
+  DashboardComparison,
+  InterventionResults,
+  ContentSection,
+  TechnicalOnboardingFlow,
+  UserCenteredOnboardingFlow,
+  OnboardingAnalyticsDashboard,
+  OnboardingSuccessMetrics,
+  UserCenteredToolkit,
+  
   // Headings
   h1: ({ className = '', ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h1 

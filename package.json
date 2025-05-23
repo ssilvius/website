@@ -51,6 +51,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-fetch-mock": "^3.0.3",
     "postcss": "^8.5.3",
+    "shiki": "^3.4.2",
     "tailwindcss": "^4.1.7",
     "ts-jest": "^29.3.4",
     "ts-node": "^10.9.2",
